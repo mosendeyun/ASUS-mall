@@ -1,0 +1,16 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin:0;
+    padding:0;			
+}
+body,html { font: 0.12rem  "微软雅黑",arial; width:100%;}
+img { display:block;}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6,b,strong{ font-weight: normal;}
+i,em{ font-style: normal;}
+input { outline:none;}
