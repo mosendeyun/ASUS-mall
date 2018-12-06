@@ -14,3 +14,11 @@ a {
 h1,h2,h3,h4,h5,h6,b,strong{ font-weight: normal;}
 i,em{ font-style: normal;}
 input { outline:none;}
+.clearfix:after {
+    content:".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
