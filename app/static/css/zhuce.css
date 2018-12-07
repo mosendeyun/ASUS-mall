@@ -37,3 +37,106 @@
     /* font-weight: 900; */
     color: rgb(38, 38, 38)
 }
+.center ul {
+    width: 270px;
+}
+ul .c-phone{
+    margin-bottom: 10px;
+}
+ul .c-phone .c-phone2{
+    /* position: relative;
+    left: 5px; */
+                padding-left: 8px;
+                width: 260px;
+                height: 36px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                color: #000;
+        
+}
+ul .c-number{
+    margin-bottom: 10px;
+}
+ul .c-number .c-number2{
+                padding-left: 8px;
+                width: 110px;
+                height: 36px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                color: #000;
+        
+}
+ul .c-number .btn-number {
+                    width: 134px;
+                    height: 38px;
+                    line-height: 38px;
+                    padding: 0 18px;
+                    background-color: #1E9FFF;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 14px;
+                    border: none;
+                    color: #fff;
+}
+ul .c-yincang{
+            position: absolute;
+            top: 370px;
+            left: 295px;
+           width: 180px;
+           height: 40px;
+           display: none;
+}
+ul .c-yincang .c-yincang2{
+    text-align: center;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    background: #666;
+    opacity: .8;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+}
+ul .c-login {
+    width: 270px;
+    margin-bottom: 10px;
+}
+ul .c-login .c-login2 {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        /* padding: 0 8px; */
+        text-align: center;
+        color: #fff;
+        background-color: #1E9FFF;
+        border: none;
+        cursor: pointer;
+        border-radius: 2px;
+}
+ul .c-label {
+    width: 280px;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+ul .c-label .c-label2 span{
+        font-size: 12px;
+        /* line-height: 25px; */
+}
+ul .c-label .c-label2 a {
+    font-size: 12px;
+    color: #00a8ff;
+}
+.go_sigin{
+     font-size: 14px;
+     color: #00a8ff;
+}
+.go_sigin:hover {
+    color: #777;
+}
+ul .c-label .c-label2 a:hover{
+    color: #777;
+}
