@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./static/css/common/reset.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./static/css/zhuce.css">
     <script src="./static/js/jquery.js"></script>
 
@@ -20,13 +19,17 @@
                 <div class="sign-title">
                     <h2>注册华硕商城账号</h2>
                 </div>
-                <form action="" method="get">
+                <form action="" method="get" onsubmit = "return false" >
                     <ul>
                         <li class="c-phone">
                             <input type="text" placeholder="请输入11位的手机号码" class="c-phone2" >
                         </li>
+                        <li class="c-yan">
+                            <input type="text" placeholder="验证码" name="number" class="c-yan2">
+                            <input type="button" value="8364" class="yan-btn">
+                        </li>
                         <li class="c-number">
-                            <input type="text" placeholder="请输入验证码" name="number" class="c-number2">
+                            <input type="text" placeholder="请输入短信验证码" name="number" class="c-number2">
                             <button class="btn-number">获取短信验证码</button>
                         </li>
                         <li class="c-yincang">
@@ -36,8 +39,8 @@
                             <button class="c-login2">注&nbsp;&nbsp;&nbsp;册</button>
                         </li>
                         <li class="c-label">
-                            <input type="checkbox">
-                            <label for="" class="c-label2">
+                            <input type="checkbox" class="c-label2" checked="checked">
+                            <label>
                                 <span>我已阅读并同意</span>
                                 <a href="#" target="_blank"> 会员注册协议</a>和
                                 <a href="#" target="_blank">隐私保护政策</a>

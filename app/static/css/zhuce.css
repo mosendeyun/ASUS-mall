@@ -79,9 +79,33 @@ ul .c-number .btn-number {
                     border: none;
                     color: #fff;
 }
+.c-yan{
+    position: relative;
+    display: none;
+        width: 270px;
+        height: 50px;
+        margin-bottom: 10px;
+}
+.c-yan .c-yan2 {
+    width: 160px;
+    height: 36px;
+    padding: 1px 8px ;
+    border: 1px solid #ccc;
+}
+.c-yan .yan-btn{
+                position: absolute;
+                left: 190px;
+                top: 0px;
+                background: #00a8ff;
+                height: 40px;
+                width: 80px;
+                border: none;
+                cursor: pointer;
+                color: #fff;
+}
 ul .c-yincang{
             position: absolute;
-            top: 370px;
+            top: 290px;
             left: 295px;
            width: 180px;
            height: 40px;
