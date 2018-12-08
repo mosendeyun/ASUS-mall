@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+.w-center{
+    margin: 0 auto;
+}
+.clear:after{
+    display: block;
+    content: '.';
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.banxin{
+    width: 1226px;
+}
+.w-c1{
+    height: 40px;
+    /* background: red; */
+    /* border: 2px solid green; */
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.w-c1 i{
+    border-left: 2px solid #00a8ff;
+    display: inline-block;
+    height: 24px;
+    margin-right: 14px;
+    vertical-align: -4px;
+}
+.w-c1 span{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: normal;
+    color: #4f4f4f;
+    line-height: 40px;
+    height: 40px;
+}
+.w-c2{
+    height: 340px;
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}
+.w-c2>div{
+    width: 400px;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.w-c2-2{
+    width: 400px;
+    height: 147px;
+}
+.w-c2-2 a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/09583256995251.jpg') no-repeat;
+}
+.w-c2-3{
+
+}
+.w-c2-3 li{
+    float: left;
+    width: 200px;height: 193px;
+}
+.w-c2-4 a{
+    display: inline-block;
+    width: 200px;height: 193px;
+    background: url('../images/09593454499810.png')
+}
+.w-c2-5 a{
+    display: inline-block;
+    width: 200px;height: 193px;
+    background: url('../images/09595598495210.png');
+}
+.w-c3{
+    width: 100%;
+    height: 400px;
+}
+.w-c3-1{
+
+}
+.w-c3-1 li{
+    text-align: center;
+    float: left;
+    height: 400px;
+    width: 243px;
+    border: 1px solid #cccccc; 
+    padding-top:30px;
+}
+
+.w-c3-2{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.w-c3-2 a{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+   
+}
+.w-c3-2 a img {
+    width: 200px;
+}
+.w-c3-3{
+    color: #434343;
+    line-height: 20px;
+    height: 22px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}.w-c3-4{
+    line-height: 20px;
+    height: 22px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+}
+.w-c3-5{
+    font-weight: 900;
+    color: red;
+    font-size: 14px;
+    margin-top:30px;
+}
+
+
+
+/* ------------------------------------------------ */
