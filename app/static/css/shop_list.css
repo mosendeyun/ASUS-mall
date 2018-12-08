@@ -64,6 +64,9 @@
   padding: 6px 15px 3px;
   background: #fff;
 }
+#s_main .s_maincon .s_section .s_pag .filter_container .gallery_filter .filter_lists .hide {
+  display: none;
+}
 #s_main .s_maincon .s_section .s_pag .filter_container .gallery_filter .filter_lists .filter_entries {
   border-bottom: 1px solid #ccc;
   padding: 8px 0;
@@ -257,6 +260,13 @@
 #s_main .s_maincon .s_section .s_pag .gallery_show .gallery_grid .goods_item .goods_others .s_col {
   color: red;
 }
+#s_main .s_maincon .s_section .s_pag .gallery_show .s_box {
+  float: left;
+}
+#s_main .s_maincon .s_section .s_pag .gallery_show .s_box1 {
+  display: none;
+  float: left;
+}
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview {
   overflow: hidden;
   text-align: center;
@@ -268,10 +278,10 @@
 }
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview a {
   color: #6c6c6c;
+  border-radius: 5px;
 }
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview .active {
-  background-color: #b2b2b2;
-  border-radius: 5px;
+  background: #b2b2b2;
 }
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview .flip {
   width: 45px;

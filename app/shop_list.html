@@ -94,7 +94,7 @@
                                     </dd>
                                 </dl>
                                 <!-- 尺寸 -->
-                                <dl class="filter_entries clearfix">
+                                <dl class="filter_entries clearfix hide">
                                     <dt class="filter_label">屏幕分辨率：</dt>
                                     <dd class="filter_values">
                                         <span class="filter_item s_active"><a href="#">不限</a></span>
@@ -108,7 +108,7 @@
                                         <span class="filter_item"><a href="#">10.1英寸</a></span>
                                     </dd>
                                 </dl>
-                                <dl class="filter_entries clearfix">
+                                <dl class="filter_entries clearfix hide">
                                     <dt class="filter_label">屏幕尺寸：</dt>
                                     <dd class="filter_values">
                                         <span class="filter_item s_active"><a href="#">不限</a></span>
@@ -127,7 +127,7 @@
                                         <span class="filter_item"><a href="#">HD 1366X768</a></span>
                                     </dd>
                                 </dl>
-                                <dl class="filter_entries clearfix">
+                                <dl class="filter_entries clearfix hide">
                                     <dt class="filter_label">屏幕类型：</dt>
                                     <dd class="filter_values">
                                         <span class="filter_item s_active"><a href="#">不限</a></span>
@@ -136,7 +136,7 @@
                                         <span class="filter_item"><a href="#">触摸屏</a></span>
                                     </dd>
                                 </dl>
-                                <dl class="filter_entries clearfix">
+                                <dl class="filter_entries clearfix hide">
                                     <dt class="filter_label">有无光驱：</dt>
                                     <dd class="filter_values">
                                         <span class="filter_item s_active"><a href="#">不限</a></span>
@@ -144,7 +144,7 @@
                                         <span class="filter_item"><a href="#">无光驱</a></span>
                                     </dd>
                                 </dl>
-                                <dl class="filter_entries clearfix">
+                                <dl class="filter_entries clearfix hide">
                                     <dt class="filter_label">键盘背光：</dt>
                                     <dd class="filter_values">
                                         <span class="filter_item s_active"><a href="#">不限</a></span>
@@ -165,8 +165,8 @@
                     <div class="gallery_sortbar">
                         <div class="gallery_sort">
                             <a href="javascript: ;">默认</a><span>|</span>
-                            <a href="javascript: ;">价格<i class="iconfont icon-jiang"></i></a><span>|</span>
-                            <a href="javascript: ;">销量<i class="iconfont icon-jiang"></i></a>
+                            <a class="ascending_order" href="javascript: ;">价格<i class="iconfont icon-jiang"></i></a><span>|</span>
+                            <a class="descending_order" href="javascript: ;">销量<i class="iconfont icon-jiang"></i></a>
                         </div>
                         <div class="gallery_showmode">
                             <i class="iconfont s_list icon-liebiao1"></i><a href="javascript: ;" class="gird_show">大图</a>
@@ -178,8 +178,7 @@
                     <!-- 商品区 -->
                     <div class="gallery_show">
                         <div class="gallery_grid">
-                            <div class="s_box">
-
+                            <div class="s_box s_hide">
                                 <!-- <dl class="clearfix goods_item ga-product">
                                     <dt class="goods_pic"><img src="static/images/list1.jpg" alt=""></dt>
                                     <dd class="goods_info">
@@ -211,10 +210,13 @@
                                     </dd>
                                 </dl> -->
                             </div>
+                            <div class="s_box1 s_hide">
+
+                            </div>
                             <div class="pageview">
                                 <a class="prev flip" href="javascript: ;"> <i class="iconfont icon-xiangzuo"></i></a>
-                                <a href="" class="flip active">1</a>
-                                <a href="" class="flip ">2</a>
+                                <a href="javascript: ;" class="flip flip1 active">1</a>
+                                <a href="javascript: ;" class="flip flip2 ">2</a>
                                 <a class="next flip" href="javascript: ;"> <i class="iconfont icon-jiantou"></i></a>
                             </div>
                         </div>
