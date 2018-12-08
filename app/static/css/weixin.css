@@ -1,0 +1,47 @@
+body,html{
+    background: #333;
+}
+#body {
+    width: 1233px;
+    height: 400px;
+    position:absolute;     
+    left:0;    
+    top:0;   
+    right:0;   
+    bottom:0;   
+    margin:auto;
+     background: #333;
+     text-align: center;
+}
+.title{
+    position: relative;
+    left: 38px;
+        width: 1233px;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+}
+.wrp_code {
+    
+     position: absolute;     
+     top:46%;   
+     left:50%;  
+     margin-left:-101px;   
+     margin-top:-136px;
+}
+.wrp_code img{
+    width: 282px;
+    height: 282px;
+}
+.info-wrap{
+    position: absolute;     
+     top:86%;   
+     left:50%;  
+     margin-left:-101px;   
+        width: 280px;
+        height: 54px;
+        line-height: 25px;
+        border-radius: 27px 27px 27px 27px;
+        background: #232323;
+        color: #fff;
+}

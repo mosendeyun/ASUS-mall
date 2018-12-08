@@ -105,8 +105,8 @@ ul .c-number .btn-number {
 }
 ul .c-yincang{
             position: absolute;
-            top: 290px;
-            left: 295px;
+            top: 351px;
+            left: 581px;
            width: 180px;
            height: 40px;
            display: none;
@@ -150,7 +150,7 @@ ul .c-label .c-label2 span{
         font-size: 12px;
         /* line-height: 25px; */
 }
-ul .c-label .c-label2 a {
+ul .c-label  a {
     font-size: 12px;
     color: #00a8ff;
 }
@@ -161,6 +161,6 @@ ul .c-label .c-label2 a {
 .go_sigin:hover {
     color: #777;
 }
-ul .c-label .c-label2 a:hover{
+ul .c-label a:hover{
     color: #777;
 }
