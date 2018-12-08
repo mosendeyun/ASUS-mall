@@ -254,8 +254,8 @@
   height: 17px;
   line-height: 17px;
 }
-#s_main .s_maincon .s_section .s_pag .gallery_show .gallery_grid .goods_item .goods_others .collected {
-  display: none;
+#s_main .s_maincon .s_section .s_pag .gallery_show .gallery_grid .goods_item .goods_others .s_col {
+  color: red;
 }
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview {
   overflow: hidden;
@@ -280,6 +280,9 @@
   text-align: center;
   margin: 0 16px;
   display: inline-block;
+}
+#s_main .s_maincon .s_section .s_pag .gallery_show .pageview .flip:hover {
+  background: #ccc;
 }
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview .prev,
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview .next {

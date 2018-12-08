@@ -1,27 +1,120 @@
 #s_contain{
+    background:#eee; padding: 30px 0;
     .con_page{
-        width: 1226px; margin: 30px auto;
+        width: 1226px;margin:0 auto;
+        li{float: left;font-size: 16px;height: 50px;width: 100px;text-align: center;color: #666666;}
         .section{
             .sec_main{
                 margin-bottom: 30px;
+                .checkbox_box{
+                    margin-top: 16px;width: 16px;height: 16px;text-align: center;line-height: 16px;border: 1px solid #c9c9c9;float: left;
+                    border-radius: 5px;position: relative;
+                    i{display: block;color: #fff;}   
+                }
+                .checkAll{background-color: #00a8ff;border-color: #00a8ff;}
                 .car_head{
                     height: 50px;line-height: 50px;padding-left: 16px;padding-right: 50px;background-color: #fff;
-                    margin-bottom: 10px;
-                    li{float: left;font-size: 16px;height: 50px;width: 100px;text-align: center;}
+                    margin-bottom: 10px;                   
                     .cart_input{
-                        width: 118px;text-align: left;
-                        .checkbox_box{
-                            margin-top: 16px;width: 16px;height: 16px;text-align: center;line-height: 16px;border: 1px solid #c9c9c9;float: left;
-                            border-radius: 5px;position: relative;
-                            i{display: block;color: #fff;}
-                        }
-                        .checkAll{background-color: #00a8ff;border-color: #00a8ff;}
-                        .label{margin-left: 15px;}
+                        width: 118px;text-align: left;                      
+                                          
+                        label{margin-left: 15px;}
                     }
                     .cart_goods{ width: 490px;text-align: left;}
-                     .cart_price{width: 110px;} 
-                     .cart_num{width: 96px;} 
+                    .cart_price{width: 110px;} 
+                    .cart_num{width: 96px;} 
                     .cart_action{width:46px;}
+                }
+                .cart_list{
+                    .cart_item{
+                        background-color: #fff;margin-bottom: 10px;padding-bottom: 30px;
+                        li{margin-top: 40px;font-size: 14px;height: auto;}
+                        .cart_product{
+                            padding:0 50px 4px 16px;
+                            .cart_input{
+                                width: 118px;text-align: left;                               
+                            }
+                        .cart_goods{
+                            margin-top: 20px;width: 490px;text-align: left;
+                                .p_pic{
+                                    width: 100px;height:100px;line-height: 100px;overflow: hidden;float: left;
+                                    a{
+                                        color: #333;
+                                        img{max-width: 100px;max-height:100px;line-height: 100px;vertical-align: middle;}
+                                    }
+                                }
+                                .p_title{
+                                    margin-left: 10px;line-height: 18px;margin-top: 20px;width: 375px;float: left;
+                                    a{
+                                        color: #333;
+                                        span{margin-top: 5px;display: block;}
+                                    }
+                                }
+                            }
+                            .cart_price{width:110px;}
+                            .cart_num{
+                                width: 96px;
+                                .p_quantity{
+                                    width: 91px;height: 23px;line-height: 23px;border: 1px solid #c9c9c9;font-size:14px;overflow: hidden;
+                                    a{width: 23px;height: 23px;text-align: center;display: inline-block;color: #8b8b8b;margin-left:2px;}
+                                    a:hover{background:#ccc;}
+                                    input{width:32px;height: 23px;line-height: 23px;text-align: center;font-size: 14px;border:0;}
+                                }
+                                .goods_num_wrap{font-size: 12px;margin-top: 5px;color: #808080;}
+                            }
+                            .cart_action{
+                                width:46px;
+                                .btn_delete{
+                                    width:26px;height:26px;text-align: center;line-height:26px;display: block;font-size: 16px;color: #333;
+                                    i{font-size:26px;}
+                                }
+                            }
+                        }
+                        .product_active{
+                            line-height: 24px;font-size: 14px;color: #f00;margin-left: 118px;
+                            border-top: 1px solid #d9d9d9;padding-top: 4px;padding-bottom: 4px;
+                        }
+                    }
+                }
+                .order_discount{
+                    padding: 10px 0;background-color: #fff;margin-bottom: 10px;
+                    .action_toggle{border-radius: 50%;border-color: #00a8ff;background-color: #00a8ff;color: #fff;vertical-align: top;}
+                    .order_promotion{
+                        text-align: left;margin: 10px 0 10px 10px;line-height: 20px;height:40px;
+                        h3{
+                            font-size: 18px;margin-bottom: 5px;
+                            .action_toggle{
+                                margin-right: 10px;display: inline-block;width: 16px;height: 16px;overflow: hidden;border: 1px solid #a9a9a9;text-align: center;font: 14px/18px simsun,serif;
+                            }
+                        }
+                        .content{
+                            padding-left: 30px;
+                            li{
+                                text-align: left;height: 30px;line-height: 30px;    width: auto;font-size: 16px;
+                                b{color: #00a8ff;}
+                            }
+                        }
+                    }
+                }
+                .order_price{
+                    background-color: #fff;height: 70px;padding: 0 16px;
+                    .btn_link{float: left;font-size: 14px;color: #404040;line-height: 70px;margin-left: 20px;margin-right: 10px;}
+                    .order_num{
+                        float: left;margin-left: 30px;line-height: 70px;font-size: 14px;
+                        span{color: #00a8ff;}
+                    }
+                    .action_settle{
+                        background: #00a8ff;border-radius: 5px;float: right;margin-top: 13px;font-size: 133.33333%;color: #fff;
+                        span{background: #00a8ff;display: block;line-height: 44px; width: 160px;height: 44px;
+                            border:0;border-radius: 5px;font-size: 20px;}
+                    }
+                    .total_price{
+                        float: right;line-height: 70px;margin-right: 40px;
+                        span{
+                            color: #00a8ff;margin-right: 10px;
+                        }
+                        b{color: #f00;font-size: 30px;}
+                    }
                 }
             }
         }
