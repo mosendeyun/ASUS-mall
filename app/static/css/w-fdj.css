@@ -72,12 +72,12 @@
     position: absolute;
     top: -110px;
     right: -418px;
-    /* display: none; */
+    display: none;
     border: 2px splid black;
 }
 .h-r>img{
     position: absolute;
-    width: 1600px;height: 1600px;
+    width: 1000px;
 }
 /* 小图片部分 */
 .h-b{
