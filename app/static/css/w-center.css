@@ -135,3 +135,57 @@
 
 
 /* ------------------------------------------------ */
+.w-link{
+    margin:0 auto;
+}
+.w-link1{
+    height: 312px;
+    /* width: 100%;background: aqua; */
+    display: flex;
+    justify-content: space-around;
+}
+.w-link1 li{
+    width: 234px;
+    height: 298px;
+    /* border: 1px solid black; */
+    position: relative;
+    text-align: center;
+}
+.link2{
+    height: 204px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wlink1-1{
+    height: 204px;
+    width: 100%;
+    /* background: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.wlink1-1 img{
+    width: 204px;
+    height: 204px;
+}
+.wlink1-2{
+    color: #434343;
+    height: 22px;
+    font-size: 14px;
+}
+.wlink1-3{
+    color: #898989;
+    line-height: 20px;
+    font-size: 14px;
+}
+.wlink1-4{
+    font-size:16px;
+    color:red;
+    line-height: 40px;
+}
+.link2:hover{
+    top:-2px;
+}
