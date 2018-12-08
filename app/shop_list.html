@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品页</title>
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_ha06hxr5qxp.css">
-    <link rel="stylesheet" href="http://localhost:8888/gitup/ASUS-mall/app/static/css/common/reset.css">
-    <link rel="stylesheet" href="http://localhost:8888/gitup/ASUS-mall/app/static/css/common/header-footer.css">
-    <link rel="stylesheet" href="http://localhost:8888/gitup/ASUS-mall/app/static/css/shop_list.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_qsst1kk5wec.css">
+    <link rel="stylesheet" href="static/css/common/reset.css">
+    <link rel="stylesheet" href="static/css/common/header-footer.css">
+    <link rel="stylesheet" href="static/css/shop_list.css">
 </head>
 
 <body>
@@ -36,142 +36,211 @@
                             </div>
                             <a class="s_rest" href="#">重置筛选项 <i class="iconfont icon-jiantou"></i></a>
                         </div>
-                    </div>
-                    <!-- 帅选条件 -->
-                    <div class="gallery_filter">
-                        <div class="filter_selected">
-                            <p>您已选择：</p>
+                        <!-- 帅选条件 -->
+                        <div class="gallery_filter">
+                            <div class="filter_selected">
+                                <p>您已选择：</p>
+                            </div>
+                            <div class="filter_lists">
+                                <!-- 分类 -->
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">分类</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="javascript: ;" class="handle action-cat-filter">顽石-FL/YX系列</a></span>
+                                        <span class="filter_item"><a href="javascript: ;" class="handle action-cat-filter">飞行堡垒-FX/ZX系列</a></span>
+                                    </dd>
+                                </dl>
+                                <!-- 价格 -->
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">价格</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">1-2999元</a></span>
+                                        <span class="filter_item"><a href="#">3000-5999元</a></span>
+                                        <span class="filter_item"><a href="#">6000-7999元</a></span>
+                                        <span class="filter_item"><a href="#">8000-8999元</a></span>
+                                        <span class="filter_item"><a href="#">10000-29999元</a></span>
+                                        <span class="filter_item">
+                                            <input type="text" name="min_set" size="4" id="min" class="action-filter-input">
+                                            <span class="input-seq">-</span>
+                                            <input type="text" name="max_set" id="max" size="4" class="action-filter-input">
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <!-- 操作系统 -->
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">操作系统:</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">Windows 10 Home</a></span>
+                                        <span class="filter_item"><a href="#">Windows 10 Pro</a></span>
+                                        <span class="filter_item"><a href="#">Win10 home+Office</a></span>
+                                        <span class="filter_item"><a href="#">Windows 10 S </a></span>
+                                    </dd>
+                                </dl>
+                                <!-- 内存 -->
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">内存：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#"> 2GB</a></span>
+                                        <span class="filter_item"><a href="#">4GB</a></span>
+                                        <span class="filter_item"><a href="#">6GB</a></span>
+                                        <span class="filter_item"><a href="#">8GB</a></span>
+                                        <span class="filter_item"><a href="#">16GB</a></span>
+                                        <span class="filter_item"><a href="#">32GB</a></span>
+                                        <span class="filter_item"><a href="#">64GB</a></span>
+                                        <span class="filter_item"><a href="#">4GB*2</a></span>
+                                    </dd>
+                                </dl>
+                                <!-- 尺寸 -->
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">屏幕分辨率：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                        <span class="filter_item"><a href="#">10.1英寸</a></span>
+                                    </dd>
+                                </dl>
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">屏幕尺寸：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">1600X900</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">QHD 3200X1800</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                        <span class="filter_item"><a href="#">HD 1366X768</a></span>
+                                    </dd>
+                                </dl>
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">屏幕类型：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">镜面屏</a></span>
+                                        <span class="filter_item"><a href="#">雾面屏</a></span>
+                                        <span class="filter_item"><a href="#">触摸屏</a></span>
+                                    </dd>
+                                </dl>
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">有无光驱：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">有光驱</a></span>
+                                        <span class="filter_item"><a href="#">无光驱</a></span>
+                                    </dd>
+                                </dl>
+                                <dl class="filter_entries clearfix">
+                                    <dt class="filter_label">键盘背光：</dt>
+                                    <dd class="filter_values">
+                                        <span class="filter_item s_active"><a href="#">不限</a></span>
+                                        <span class="filter_item"><a href="#">是</a></span>
+                                        <span class="filter_item"><a href="#">否</a></span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="filter_more">
+                                <a href="javascript:void(0);" class="handle action_more">
+                                    <span class="text" data-toggle="收起筛选项">显示更多筛选项</span>
+                                    <i class="iconfont icon icon-down"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="filter_lists">
-                        <!-- 分类 -->
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">分类</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="javascript: ;" class="handle action-cat-filter">顽石-FL/YX系列</a></span>
-                                <span class="filter_item"><a href="javascript: ;" class="handle action-cat-filter">飞行堡垒-FX/ZX系列</a></span>
-                            </dd>
-                        </dl>
-                        <!-- 价格 -->
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">价格</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">1-2999元</a></span>
-                                <span class="filter_item"><a href="#">3000-5999元</a></span>
-                                <span class="filter_item"><a href="#">6000-7999元</a></span>
-                                <span class="filter_item"><a href="#">8000-8999元</a></span>
-                                <span class="filter_item"><a href="#">10000-29999元</a></span>
-                                <span class="filter_item">
-                                    <input type="text" name="min_set" size="4" id="min" class="action-filter-input">
-                                    <span class="input-seq">-</span>
-                                    <input type="text" name="max_set" id="max" size="4" class="action-filter-input">
-                                </span>
-                            </dd>
-                        </dl>
-                        <!-- 操作系统 -->
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">操作系统:</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">Windows 10 Home</a></span>
-                                <span class="filter_item"><a href="#">Windows 10 Pro</a></span>
-                                <span class="filter_item"><a href="#">Win10 home+Office</a></span>
-                                <span class="filter_item"><a href="#">Windows 10 S </a></span>
-                            </dd>
-                        </dl>
-                        <!-- 内存 -->
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">内存：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#"> 2GB</a></span>
-                                <span class="filter_item"><a href="#">4GB</a></span>
-                                <span class="filter_item"><a href="#">6GB</a></span>
-                                <span class="filter_item"><a href="#">8GB</a></span>
-                                <span class="filter_item"><a href="#">16GB</a></span>
-                                <span class="filter_item"><a href="#">32GB</a></span>
-                                <span class="filter_item"><a href="#">64GB</a></span>
-                                <span class="filter_item"><a href="#">4GB*2</a></span>
-                            </dd>
-                        </dl>
-                        <!-- 尺寸 -->
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">屏幕尺寸：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                            </dd>
-                        </dl>
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">屏幕分辨率：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                            </dd>
-                        </dl>
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">屏幕尺寸：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                            </dd>
-                        </dl>
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">屏幕尺寸：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                            </dd>
-                        </dl>
-                        <dl class="filter_entries clearfix">
-                            <dt class="filter_label">屏幕尺寸：</dt>
-                            <dd class="filter_values">
-                                <span class="filter_item s_active"><a href="#">不限</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                                <span class="filter_item"><a href="#">10.1英寸</a></span>
-                            </dd>
-                        </dl>
+                    <!-- 排序 -->
+                    <div class="gallery_sortbar">
+                        <div class="gallery_sort">
+                            <a href="javascript: ;">默认</a><span>|</span>
+                            <a href="javascript: ;">价格<i class="iconfont icon-jiang"></i></a><span>|</span>
+                            <a href="javascript: ;">销量<i class="iconfont icon-jiang"></i></a>
+                        </div>
+                        <div class="gallery_showmode">
+                            <i class="iconfont s_list icon-liebiao1"></i><a href="javascript: ;" class="gird_show">大图</a>
+                            <a href="javascript: ;"><i class="iconfont icon-liebiao"></i>列表</a>
+                            <input type="checkbox" name="is_store" id="" class="action-available">
+                            <label for="">仅显示有货</label>
+                        </div>
                     </div>
-                    <div class="filter_more">
-                        <a href="javascript:void(0);" class="handle action_more">
-                            <span class="text" data-toggle="收起筛选项">显示更多筛选项</span>
-                            <i class="icon"></i>
-                        </a>
+                    <!-- 商品区 -->
+                    <div class="gallery_show">
+                        <div class="gallery_grid">
+                            <dl class="clearfix goods_item ga-product">
+                                <dt class="goods_pic"><img src="static/images/list1(1).jpg" alt=""></dt>
+                                <dd class="goods_info"> 
+                                    <h3 class="goods_name"><a href="javascript: ;">【12.12提前购】【新品上市】A407UB-顽石14寸轻薄窄边框笔记本（Windows10home/i5-7200U/4G内存/500GB+128G SSD)-冰柱金</a></h3>
+                                    <p class="price">￥4599</p>
+                                </dd>
+                                <dd class="goods_buy">
+                                    <a class="btn cart_add" href="shopCar.html"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                                </dd>
+                                <dd class="goods_others">
+                                    <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
+                                    <a href="javascript: ;" class="collect collected"><i class="iconfont icon-xin">已收藏</i></a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix goods_item ga-product">
+                                <dt class="goods_pic"><img src="static/images/list1(1).jpg" alt=""></dt>
+                                <dd class="goods_info"> 
+                                    <h3 class="goods_name"><a href="javascript: ;">【12.12提前购】【新品上市】A407UB-顽石14寸轻薄窄边框笔记本（Windows10home/i5-7200U/4G内存/500GB+128G SSD)-冰柱金</a></h3>
+                                    <p class="price">￥4599</p>
+                                </dd>
+                                <dd class="goods_buy">
+                                    <a class="btn cart_add" href="shopCar.html"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                                </dd>
+                                <dd class="goods_others">
+                                    <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
+                                    <a href="javascript: ;" class="collect collected"><i class="iconfont icon-xin">已收藏</i></a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix goods_item ga-product">
+                                <dt class="goods_pic"><img src="static/images/list1(1).jpg" alt=""></dt>
+                                <dd class="goods_info"> 
+                                    <h3 class="goods_name"><a href="javascript: ;">【12.12提前购】【新品上市】A407UB-顽石14寸轻薄窄边框笔记本（Windows10home/i5-7200U/4G内存/500GB+128G SSD)-冰柱金</a></h3>
+                                    <p class="price">￥4599</p>
+                                </dd>
+                                <dd class="goods_buy">
+                                    <a class="btn cart_add" href="shop_car.html"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                                </dd>
+                                <dd class="goods_others">
+                                    <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
+                                    <a href="javascript: ;" class="collect collected"><i class="iconfont icon-xin">已收藏</i></a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix goods_item ga-product">
+                                <dt class="goods_pic"><img src="static/images/list1(1).jpg" alt=""></dt>
+                                <dd class="goods_info"> 
+                                    <h3 class="goods_name"><a href="javascript: ;">【12.12提前购】【新品上市】A407UB-顽石14寸轻薄窄边框笔记本（Windows10home/i5-7200U/4G内存/500GB+128G SSD)-冰柱金</a></h3>
+                                    <p class="price">￥4599</p>
+                                </dd>
+                                <dd class="goods_buy">
+                                    <a class="btn cart_add" href="shopCar.html"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                                </dd>
+                                <dd class="goods_others">
+                                    <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
+                                    <a href="javascript: ;" class="collect collected"><i class="iconfont icon-xin">已收藏</i></a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pageview">
+                           <a class="prev flip" href="javascript: ;"> <i class="iconfont icon-xiangzuo"></i></a>
+                            <a href="" class="flip active">1</a>
+                            <a href="" class="flip ">2</a>
+                            <a class="next flip" href="javascript: ;"> <i class="iconfont icon-jiantou"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

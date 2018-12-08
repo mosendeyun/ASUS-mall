@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_zfgwg1uup6o.css">
+    <link rel="stylesheet" href="static/css/common/reset.css">
+    <link rel="stylesheet" href="static/css/common/header-footer.css">
+    <link rel="stylesheet" href="static/css/shop_car.css">
+</head>
+
+<body>
+    <header id="s_top"></header>
+    <div class="s_contain">
+        <div class="con_page">
+            <div class="section">
+                <div class="lsidebar"></div>
+                <div class="sec_main">
+                    <div class="car_head">
+                        <ul class="clearfix">
+                            <li class="cart_input">
+                                <div class="checkbox_box checkAll on">
+                                    <i class="iconfont icon-gou"></i>
+                                    <input type="checkbox" name="checkAll" style="display: none;">
+                                </div>
+                                <label class="checkbox_box_label">全选</label>
+                            </li>
+                            <li class="cart_goods">商品</li>
+                            <li class="cart_price">销售价</li>
+                            <li class="cart_num">数量</li>
+                            <li class="cart_discount">优惠金额</li>
+                            <li class="cart_point">积分</li>
+                            <li class="cart_subtotal">小计</li>
+                            <li class="cart_action">操作</li>
+                        </ul>
+                    </div>
+                    <div class="cart_list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="s_bottom"></footer>
+
+</body>
+
+</html>
+<script src="static/js/jquery.js"></script>
+<script>
+    $('#s_top').load('header-footer.html #s_top');
+    $('#s_bottom').load('header-footer.html #s_bottom');
+</script>
