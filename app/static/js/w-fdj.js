@@ -151,3 +151,29 @@ var djs = (function () {
         }
     }
 }())
+
+var xhj = (function () {
+    return {
+        init() {
+            var img = document.querySelector('.top')
+            window.onscroll = function () {
+                var t = document.documentElement.scrollTop;
+                if (t > 400) {
+                    img.style.display = "block";
+                    img.onclick = function () {
+                        var time = setInterval(fn, 20)
+                        function fn() {
+                            document.documentElement.scrollTop -= 5
+                        }
+                        document.onmousedown = function () {
+                            clearInterval(time);
+                        }
+                    }
+                }
+                else {
+                    img.style.display = "none";
+                }
+            }
+        }
+    }
+}())
