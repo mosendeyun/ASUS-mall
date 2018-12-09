@@ -3,50 +3,68 @@ var shopCar = (function () {
     console.log(cartList)
     return {
         init() {
-            // this.event();
             this.getData();
         },
         event() {
             var _this = this;
-            cartList.oninput = function (e) {
-                e = e || window.event;
-                var target = e.target || e.srcElement;
-                var index = target.parentNode.index;
-                if (target.nodeName === 'INPUT') {
-                    // 修改本地的数据
-                    // 获取当前数据
-                    var data = _this.data[index];
-                    // 修改对应数据的数量
-                    data.count = Number(target.value);
-                    // 更新本地数据
-                    localStorage.shopList = JSON.stringify(_this.data);
-                    // _this.setItem(data);
-                    // 修改小计
-                    _this.insertData(_this.data);
+            $('.cart_action').click(function(){
+                let pNode=$(this).parent().parent().parent()
+                console.log(_this.data);
+                _this.data.splice(pNode.index,1);
+                pNode.remove();
+                localStorage.shopList=JSON.stringify(_this.data)                
+           })
+           $(".count").blur(function(){
+               let index=$(this).parent().parent().parent().parent().parent().index()
+               let data=_this.data[index];
+               console.log( data.count)
+               data.count=$(this).val()
+               localStorage.shopList=JSON.stringify(_this.data)
+                _this.insertData(_this.data)
+           })
+           $('.btn_decrease').click(function(){
+               var val=$(this).next().val()*1
+               --val
+               if(val<1){
+                $(this).next().val(1)
+               }else{
+                   $(this).next().val(val)
+               }
+               let index=$(this).parent().parent().parent().parent().parent().index()
+               let data=_this.data[index];
+               data.count=val
+               _this.insertData(_this.data)
+           })
+           $('.btn_increase').click(function(){
+            var val=$(this).prev().val()*1
+            ++val
+            if(val<1){
+             $(this).prev().val(1)
+            }else{
+                $(this).prev().val(val)
+            }
+            let index=$(this).parent().parent().parent().parent().parent().index()
+            let data=_this.data[index];
+            data.count=val
+            _this.insertData(_this.data)
+        })
 
-                }
-            }
-            cartList.onclick = function (e) {
-                e = e || window.event;
-                var target = e.target || e.srcElement;
-                var pNode = target.parentNode;
-                if (target.nodeName == 'BUTTON') {
-                    _this.data.splice(pNode.index, 1);
-                    console.log(_this.data);
-                    pNode.remove();
-                    localStorage.shopList = JSON.stringify(_this.data);
-                }
-            }
+
+
+
+
         },
         getData() {
             var shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
             this.data = shopList;
+            console.log(this.data)
             this.insertData(shopList)
 
         },
         insertData(data) {
-            cartList.innerHTML = '';         
+            cartList.innerHTML = ''; 
+            var sum=0,total=0;        
             data.forEach((item, index) => {
                 var $div = document.createElement('div');
                 $div.index = index;
@@ -74,15 +92,15 @@ var shopCar = (function () {
                             <li class="cart_price every_price">￥${data[index].price}</li>
                             <li class="cart_num">
                                 <div class="p_quantity">
-                                    <a href="javascript:void(0);" class="btn-decrease">-</a>
-                                    <input type="text" name="quantity[73664]" value="1">
-                                    <a href="javascript:void(0);" class="btn-increase">+</a>
+                                    <a href="javascript:void(0);" class="btn_decrease">-</a>
+                                    <input type="text" id="num" class="count" value="${data[index].count}" placeholder="请输入数量">
+                                    <a href="javascript:void(0);" class="btn_increase">+</a>
                                 </div>
                                 <p class="goods_num_wrap">还可购买11件</p>
                             </li>
                             <li class="cart_discount">￥0</li>
-                            <li class="cart_point">7399</li>
-                            <li class="cart_subtotal">7399</li>
+                            <li class="cart_point">${data[index].price*data[index].count}</li>
+                            <li class="cart_subtotal">${data[index].price*data[index].count}</li>
                             <li class="cart_action">
                                 <a class="btn_delete cart_remove" href="javascript:"><i class="iconfont icon-cuo"></i></a>
                             </li>
@@ -99,10 +117,15 @@ var shopCar = (function () {
                         </div>
                     </div>
                 `
-                // cartList.appendChild($div);.appendChild
-                console.log(cartList)
-                cartList.appendChild($div)
+                cartList.appendChild($div)              
+                sum+=data[index].count;
+                total+=data[index].price*data[index].count
             })
+            console.log(sum)
+            $('.allNum').html(data.length)
+            $('.chooseNum').html(sum)
+            $('.total_price b').html(total)
+            this.event()
         }
     }
 

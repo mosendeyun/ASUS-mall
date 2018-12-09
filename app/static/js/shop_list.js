@@ -6,7 +6,7 @@ var shopList = (function () {
         init() {
             console.log($box)
             this.gatDate();
-            this.event();
+            // this.event();
         },
         event() {
             var _this = this;
@@ -15,9 +15,10 @@ var shopList = (function () {
                 var target = e.target || e.srcElement;
                 if (target.nodeName === 'A' && target.className == 'btn cart_add') {
                     let father = target.parentNode.parentNode;
-                    let count = father.querySelector('.price').innerHTML;
+                    let count = 1;
+
+                    console.log(count)
                     _this.data[father.index].count = count;
-                    console.log(_this.data[father.index])
                     _this.addCar(_this.data[father.index])
                 }
             }
@@ -61,7 +62,7 @@ var shopList = (function () {
                         <p class="price">￥${data[i].price}</p>
                     </dd>
                     <dd class="goods_buy">
-                        <a class="btn cart_add" href="shop_car.html"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                        <a class="btn cart_add" href="javascripta:;"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
                     </dd>
                     <dd class="goods_others">
                         <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
@@ -77,17 +78,17 @@ var shopList = (function () {
         },
         addCar(data) {
             var shopList = localStorage.getItem('shopList') || '[]';
+            console.log(shopList)
             shopList = JSON.parse(shopList);
             for (var i = 0; i < shopList.length; i++) {
                 if (data.id == shopList[i].id) {
-                    shopList[i].count += data.count;
+                    shopList[i].count +=data.count;
                     break;
                 }
             }
             if (i == shopList.length) {
                 shopList.push(data);
             }
-            console.log(shopList)
             localStorage.shopList = JSON.stringify(shopList);
         }
     }

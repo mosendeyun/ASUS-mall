@@ -16,23 +16,23 @@ var connect = require('gulp-connect');
     
 gulp.task('minijs',function(){
     gulp.src('app/static/*.js')
-    .pipe(babel({                   //es6转es5;
-        presers:['@babel/env']
-    }))
+    // .pipe(babel({                   //es6转es5;
+    //     presers:['@babel/env']
+    // }))
     // .pipe(concat('all.js')) //先合并在压缩;
-    .pipe(uglify({
-        mangle: false,               // 是否修改变量名，默认为 true
-        compress: true,             // 是否完全压缩，默认为 true
-        preserveComments: 'all'     // 保留所有注释
-    }))
+    // .pipe(uglify({
+    //     mangle: false,               // 是否修改变量名，默认为 true
+    //     compress: true,             // 是否完全压缩，默认为 true
+    //     preserveComments: 'all'     // 保留所有注释
+    // }))
     .on('error',function(err){      //监听错误并输出;
         console.log(`错误${err.message}在第${err.line}行,第${err.col}列`)
         this.emit()
     })
     // .pipe(rev())                    //压缩完成后生成一个版本号;
     // .pipe(rename('all.min.js')) //重命名文件;
-    .pipe(gulp.dest('dist/js'))
-    // .pipe(connect.reload())  //任务压缩完成后重加载;
+    // .pipe(gulp.dest('dist/js'))
+    .pipe(connect.reload())  //任务压缩完成后重加载;
     // .pipe(rev.manifest())    //生成版本号;
     // .pipe(gulp.dest('rev'))  //输出到res文件夹
 })
@@ -46,14 +46,14 @@ gulp.task('concatjs',()=>{
 
 //压缩HTML
 gulp.task('minihtml',function(){
-    gulp.src(['rev/**/*.json','*.html']) //映射rev下面所有的json文件;与HTML数据同步;
+    gulp.src(['app/**/*.json','*.html']) //映射rev下面所有的json文件;与HTML数据同步;
     // .pipe(revCollector())            //执行
-    .pipe(htmlminify())
+    // .pipe(htmlminify())
     .on('error',function(err){      //监听错误并输出;
         console.log(`错误${err.message}在第${err.line}行,第${err.col}列`)
         this.emit()
     })
-    .pipe(gulp.dest('dist'))
+    // .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 })
 //压缩img
@@ -85,7 +85,7 @@ gulp.task('clean',()=>{
     del(['dist','rev'])
 })
 
-gulp.task('default', ['connect']);
+gulp.task('default', ['connect','watch']);
 
 //项目初始;按[]的任务顺序从左到右依次执行;
 gulp.task('start',['minijs','minimg','minihtml','watch','connect'])
