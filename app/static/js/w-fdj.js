@@ -103,6 +103,51 @@ var link = (function () {
 }())
 
 
-var fixed = (function () {
+var djs = (function () {
+    return {
+        init() {
+            var h1 = document.querySelector('.header3-3-2');
+            //getTimeDif(startTime,endTime),返回一个秒数
+            //商品结束时间
+            var endTime = new Date("2018/12/28 11:00:00");
+            //当前时间
+            var now = new Date();
+            //两个时间的时间差
+            var t = getTimeDif(now, endTime);
 
+            showTime();
+            //console.log(t);
+            //关键在于如何通过这个秒数获取具体的时间
+            //具体的时间：多少 天？多少小时？多少分钟？多少秒
+            function showTime() {
+                if (t < 0) {
+                    h1.innerHTML = "活动时间过期";
+                    return;
+                }
+                var d = parseInt(t / 3600 / 24);//得到多少天；
+
+                var h = parseInt((t / 3600 / 24 - d) * 24);//得到多少小时
+
+                var m = parseInt(((t / 3600 / 24 - d) * 24 - h) * 60);//得到分钟
+
+                var s = parseInt((((t / 3600 / 24 - d) * 24 - h) * 60 - m) * 60);//得到秒数
+                //console.log(hour);
+
+                h1.innerHTML = "距离活动时间结束还剩下：" + d + "天" + h + "时" + m + "分钟" + s + "秒"
+            };
+            //让时间差的秒数，第秒钟减一秒
+
+
+            setInterval(function () {
+                t--;
+                if (t < 0) {
+                    h1.innerHTML = "活动时间过期";
+                    return;
+                }
+                //显示倒计时时间
+                showTime();//h1.innerHTML = "距离活动时间结束还剩下："+d+"天"+h+"时"+m+"分"+s+"秒"
+            }, 1000);
+
+        }
+    }
 }())
