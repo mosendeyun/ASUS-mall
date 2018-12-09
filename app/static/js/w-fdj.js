@@ -57,3 +57,52 @@ var fdj = (function () {
         }
     }
 }())
+
+var shuliang = (function () {
+    var jian = document.querySelector('.header6-2-2');
+    var jia = document.querySelector('.header6-2-4');
+    var zhong = document.querySelector('.header6-2-3');
+    var num = 0;
+    return {
+        init() {
+            this.event();
+        },
+        event() {
+            jian.onclick = function () {
+                num--;
+                if (num <= 0) {
+                    num = 0;
+                }
+                zhong.innerHTML = num;
+            }
+            jia.onclick = function () {
+                num++;
+                if (num >= 6) {
+                    num = 5;
+                    alert("对不起，最多买五台");
+                }
+                zhong.innerHTML = num;
+            }
+            zhong.onclick = function () {
+                alert(3);
+            }
+        },
+    }
+}())
+
+var link = (function () {
+    var $liAll = $('.center1 li');
+    return {
+        init() {
+            this.event();
+        },
+        event() {
+            console.log($liAll);
+        }
+    }
+}())
+
+
+var fixed = (function () {
+
+}())
