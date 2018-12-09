@@ -269,3 +269,23 @@ color: #262626;
     font-size: 14px;
 
 }
+
+
+#tiaozhuan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-size: 16px;
+    color: #262626;
+            text-align: center;
+            line-height: 100px;
+            width:160px;
+            height: 100px;
+            background: #fff;
+            opacity: .6;
+            margin-top:-44px;
+            margin-left: -126px;
+            border-radius: 3px;
+
+}

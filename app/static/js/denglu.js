@@ -28,11 +28,26 @@ $(function () {
         console.log(phone);
         var res = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
         if (res.test(phone) && phone !== "") {
-            function ol() {
-                return Math.floor(Math.random() * (9999 - 1000)) + 1000;
-            }
-            console.log("正确马上给你发送验证码");
-            $(this).html(ol());
+            $(".yanzheng").click(function () {
+                console.log("我是验证码");
+        
+                var phone = $("#inp3 .input1").val();
+                console.log(phone);
+                var res = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+                if (res.test(phone) && phone !== "") {
+                    function ol() {
+                        return Math.floor(Math.random() * (9999 - 1000)) + 1000;
+                    }
+                    console.log("正确马上给你发送验证码");
+                    $(this).html(ol());
+                } else {
+                    $(".hefa").show().delay(1200).hide(0);
+                }
+            })
+
+
+
+
         } else {
             $(".hefa").show().delay(600).hide(0);
         }
@@ -40,22 +55,6 @@ $(function () {
 
 
 
-    $(".yanzheng").click(function () {
-        console.log("我是验证码");
-
-        var phone = $("#inp3 .input1").val();
-        console.log(phone);
-        var res = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
-        if (res.test(phone) && phone !== "") {
-            function ol() {
-                return Math.floor(Math.random() * (9999 - 1000)) + 1000;
-            }
-            console.log("正确马上给你发送验证码");
-            $(this).html(ol());
-        } else {
-            $(".hefa").show().delay(600).hide(0);
-        }
-    })
 
     $(".input2").on("blur", function () {
         var ma = $(".yanzheng").html();
@@ -64,36 +63,56 @@ $(function () {
         var shouji = $(".input1").val();
         console.log(ba);
         if (ba === ma && ba !== "") {
-            console.log("不为空 可以发送贾克斯请求");
-
-            var phone = $(".input1").val();
-            console.log(phone);
-                $.post(
-                    "http://localhost:1810/ASUS-mall/server/php/denglu.php",
-                    { "phone_number": phone },
-                    function (res) {
-                        console.log(res);
-                    }
-                )
-
-
+            
+            
             $(".c-btn").on("click", function () {
+                var phone = $(".input1").val();
                 var res = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
                 if (res.test(phone) && phone !== "") {
                     console.log("正确马上给你发送验证码 恭喜最后一步已经完成");
+                    
+                    console.log("不为空 可以发送贾克斯请求");
+        
+                    var phone = $(".input1").val();
+                    phone=JSON.stringify(phone);
+                    
+                    console.log(phone);
+
+
+
+                        $.post(
+                            "http://localhost:1810/ASUS-mall/server/php/denglu.php",
+                            { "phone_number": phone },
+                            function (res) {
+                                // res=JSON.parse(res);
+                                console.log(res);
+                                if(res){
+                                    console.log($("#tiaozhuan"));
+                                        $("#tiaozhuan").show();
+                                }
+                            }
+                        )
+
+
+
+
 
                 } 
-                else if (ba !== ma && ba !== "") {
+                else { 
+                    $(".hefa").show().delay(1200).hide(0);
                     $(".yanzheng").html("重新获取验证码");
+                    console.log(12313);
                 }
             })
 
 
-
-
-        } else if (ba !== ma && ba !== "") {
-            $(".hefa").show().delay(1000).hide(0);
+        } 
+        else {
+            $("#anhao").html("验证码有误");
+            
+            $(".hefa").show().delay(1200).hide(0);
             $(".yanzheng").html("重新获取验证码");
+     
         }
     })
 

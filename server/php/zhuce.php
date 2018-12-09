@@ -1,5 +1,6 @@
 <?php
          header('Context.type:text/html;charset=utf-8');
+         header("Access-Control-Allow-Origin:*"); 
         //  $json = file_get_contents("php://input");
         //  $json=json_decode($json);//转换为对象  在PHP中 关联数组、对象中把对象 用json——encode 转化成字符串 
         //  $number=($json->val);
@@ -13,7 +14,7 @@
                 }else{
                                  echo '连接失败';
                 }
-                $select="INSERT INTO asus (number,username,password) VALUES ('$number','','')";
+                $select="INSERT INTO asus2 (number,password) VALUES ('$number','')";
                 echo '$select';
                 $result=$coon->query($select);
 
