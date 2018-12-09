@@ -12,10 +12,14 @@ var er = (function () {
             $liAll.mouseover(function () {
                 console.log($(this).index());
                 $boxAll.eq($(this).index()).show().siblings('div').hide();
+                $boxAll.mouseover(function () {
+                    $(this).show();
+                })
             })
             $all.mouseout(function () {
                 $boxAll.hide();
             })
+
         },
     }
 }())
