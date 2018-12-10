@@ -59,11 +59,16 @@ gulp.task('minihtml',function(){
 //压缩img
 gulp.task('minimg',function(){
     gulp.src('app/**/*.{jpg,png,gif,ico}')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img'))
-    // .pipe(connect.reload())
+    // .pipe(imagemin())
+    // .pipe(gulp.dest('./dist/img'))
+    .pipe(connect.reload())
 })
-
+//压缩css
+gulp.task('minifyCss', () => {
+    return gulp.src('app/**/*.css')
+    //   .pipe(gulp.dest('dist'));
+    .pipe(connect.reload()) 
+  });
 //开启服务器;
 gulp.task('connect', function () {
     connect.server({
@@ -76,8 +81,10 @@ gulp.task('connect', function () {
 //监听文件;
 gulp.task('watch', function () {
     // 监听指定文件,如果文件改变;重新执行指定任务;
-    gulp.watch('app/*.html','minihtml') 
-    gulp.watch('app/**/*.js' 'minijs')
+    gulp.watch('app/*.html',['minihtml']) 
+    gulp.watch('app/**/*.js',['minijs'])
+    gulp.watch('app/**/*.css',['minifyCss'])
+    gulp.watch('app/**/*.{jpg,png,gif,ico}',['minimg'])
 });
 
 //删除指定文件夹;
