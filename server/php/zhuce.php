@@ -1,12 +1,12 @@
 <?php
          header('Context.type:text/html;charset=utf-8');
-         header("Access-Control-Allow-Origin:*"); 
+         header("Access-Control-Allow-Origin: *"); 
         //  $json = file_get_contents("php://input");
         //  $json=json_decode($json);//转换为对象  在PHP中 关联数组、对象中把对象 用json——encode 转化成字符串 
         //  $number=($json->val);
         $number=$_GET["val"];
         echo "$number";
-         $coon=new MySQLi("localhost","root","","db_student_admin");
+         $coon=new MySQLi("localhost","root","","db_student_admin","3306");
          $coon->query("set names 'utf-8'");//写库 
          $coon->query("set character set 'utf8'");//读库 
          if($coon){
