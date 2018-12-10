@@ -134,18 +134,18 @@ var shopCar = (function () {
             $("#allcheck").click(function () {                
                 if ($(this).prop("checked")) {
                     $("[name=checkAll]").prop("checked", true);
-                    $(this).prev().addClass('iconfont checkAll icon-gou')
-                    $("[name=checkAll]").prev().addClass('iconfont checkAll icon-gou')
+                    $(this).prev().addClass('iconfont checkAll asus-gou')
+                    $("[name=checkAll]").prev().addClass('iconfont checkAll asus-gou')
                 } else {
                     console.log($(this).prop("checked"))
                     $("[name=checkAll]").prop("checked", false);
-                    $(this).prev().removeClass('iconfont checkAll icon-gou')
-                    $("[name=checkAll]").prev().removeClass('iconfont checkAll icon-gou')
+                    $(this).prev().removeClass('iconfont checkAll asus-gou')
+                    $("[name=checkAll]").prev().removeClass('iconfont checkAll asus-gou')
                 }
             });
             $("[name=checkAll]").click(function () {
                 var bool = true;
-                $(this).prev().toggleClass('iconfont checkAll icon-gou')       
+                $(this).prev().toggleClass('iconfont checkAll asus-gou')       
                 $("[name=checkAll]").each(function () {
                     console.log(11)
                     if (!$(this).prop("checked")) {
