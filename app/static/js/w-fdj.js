@@ -1,7 +1,7 @@
 var fdj = (function () {
     var $boxw = document.querySelector('.header2-1');
     var header = document.querySelector('.header');
-
+	var header2 = document.querySelector('.header2');
     // var liAll = document.querySelectorAll('.uu li');
 
 
@@ -28,11 +28,11 @@ var fdj = (function () {
             $box.onmousemove = function (e) {
 
                 var e = e || window.event;
-                var x = e.clientX, y = e.clientY;
+                var x = e.clientX, y = e.pageY;
                 // console.log(x);
                 var left = x - $mark.offsetWidth / 2 - header.offsetLeft;
                 // console.log(x, this.offsetLeft);
-                var top = y - $mark.offsetHeight / 2 - this.offsetTop;
+                var top = y - $mark.offsetHeight / 2 - header2.offsetTop;
                 // console.log($boxw.offsetTop);
                 var lmax = this.offsetWidth - $mark.offsetWidth;
                 var tmax = this.offsetHeight - $mark.offsetHeight;
@@ -48,8 +48,8 @@ var fdj = (function () {
             $('.uu li').click(function () {
                 console.log($(this).index());
                 console.log(img);
-                img.src = `../images/w${$(this).index() + 1}.jpg`;
-                img2.src = `../images/w${$(this).index() + 1}.jpg`;
+                img.src = `static/images/w${$(this).index() + 1}.jpg`;
+                img2.src = `static/images/w${$(this).index() + 1}.jpg`;
             })
         },
         showImg() {

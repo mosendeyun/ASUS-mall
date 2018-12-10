@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="static/css/common/reset.css">
-    <link rel="stylesheet" href="static/css/w-fdj.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_575r8m45yyc.css">
+    <link rel="stylesheet" href="static/css/common/reset.css">
+    <link rel="stylesheet" href="static/css/common/header-footer.css">
+    <link rel="stylesheet" href="static/css/w-fdj.css">
     <title>Document</title>
 </head>
 
 <body>
+    <header id="s_top"></header>
     <div class="fdj clear">
         <div class="header banxin">
             <p class="header1">
@@ -211,6 +213,7 @@
             <img src="static/images/Top.jpg" alt="" />
         </div>
     </div>
+    <footer id="s_bottom"></footer>
 </body>
 
 </html>
@@ -218,9 +221,12 @@
 <script src="static/js/jquery.js"></script>
 <script src="static/js/w-fdj.js"></script>
 <script>
+     $('#s_top').load('header-footer.html #s_top');
+    $('#s_bottom').load('header-footer.html #s_bottom');
     fdj.init();
     shuliang.init();
     link.init();
     djs.init();
     xhj.init();
+   
 </script>

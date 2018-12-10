@@ -4,7 +4,7 @@ var shopCar = (function () {
     return {
         init() {
             this.getData();
-            this.allcheckbox()
+            // this.allcheckbox()
         },
         event() {
             var _this = this;
@@ -49,10 +49,34 @@ var shopCar = (function () {
                 data.count = val
                 _this.insertData(_this.data)
             })
-
-
-
-
+            $("#allcheck").click(function () {                
+                if ($(this).prop("checked")) {
+                    $("[name=checkAll]").prop("checked", true);
+                    $(this).prev().addClass('iconfont checkAll asus-gou')
+                    $("[name=checkAll]").prev().addClass('iconfont checkAll asus-gou')
+                } else {
+                  
+                    $("[name=checkAll]").prop("checked", false);
+                    $(this).prev().removeClass('iconfont checkAll asus-gou')
+                    $("[name=checkAll]").prev().removeClass('iconfont checkAll asus-gou')
+                }
+            });
+            $("[name=checkAll]").click(function () {
+                var bool = true;
+                $(this).prev().toggleClass('iconfont checkAll asus-gou')       
+                $("[name=checkAll]").each(function () {
+                   
+                    if (!$(this).prop("checked")) {
+                        bool = false;
+                    }
+                });
+                if (bool) {
+                    console.log(bool)
+                    $("#allcheck").prev().addClass('iconfont checkAll asus-gou')
+                } else {
+                    $("#allcheck").prev().removeClass('iconfont checkAll asus-gou')
+                }
+            })          
 
         },
         getData() {
@@ -104,7 +128,7 @@ var shopCar = (function () {
                             <li class="cart_point">${data[index].price * data[index].count}</li>
                             <li class="cart_subtotal">${data[index].price * data[index].count}</li>
                             <li class="cart_action">
-                                <a class="btn_delete cart_remove" href="javascript:"><i class="iconfont icon-cuo"></i></a>
+                                <a class="btn_delete cart_remove" href="javascript:"><i class="iconfont asus-cuo"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -121,43 +145,14 @@ var shopCar = (function () {
                 `
                 cartList.appendChild($div)
                 sum += data[index].count;
-                total += data[index].price * data[index].count
+                total += data[index].price * data[index].count;
+                
             })
             console.log(sum)
             $('.allNum').html(data.length)
             $('.chooseNum').html(sum)
             $('.total_price b').html(total)
             this.event()
-        },
-        allcheckbox() {
-            console.log( $("[name=checkAll]"))
-            $("#allcheck").click(function () {                
-                if ($(this).prop("checked")) {
-                    $("[name=checkAll]").prop("checked", true);
-                    $(this).prev().addClass('iconfont checkAll asus-gou')
-                    $("[name=checkAll]").prev().addClass('iconfont checkAll asus-gou')
-                } else {
-                    console.log($(this).prop("checked"))
-                    $("[name=checkAll]").prop("checked", false);
-                    $(this).prev().removeClass('iconfont checkAll asus-gou')
-                    $("[name=checkAll]").prev().removeClass('iconfont checkAll asus-gou')
-                }
-            });
-            $("[name=checkAll]").click(function () {
-                var bool = true;
-                $(this).prev().toggleClass('iconfont checkAll asus-gou')       
-                $("[name=checkAll]").each(function () {
-                    console.log(11)
-                    if (!$(this).prop("checked")) {
-                        bool = false;
-                    }
-                });
-                if (bool) {
-                    $("#allcheck").prop("checked", true);
-                } else {
-                    $("#allcheck").prop("checked", false);
-                }
-            })
         }
     }
 

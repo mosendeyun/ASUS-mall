@@ -19,9 +19,6 @@
     width: 1226px;
     margin: 0 auto
 }
-.fdj{
-    /* border:1px solid red; */
-}
 /* ---------------头部开始------------------- */
 .fdj .header{
     
@@ -443,9 +440,6 @@
     position: relative;
 }
 .center2-1{
-    position:absolute;
-    top: 0;
-    left: 0;
     display: none;
 }
 .center2 .center2-1:nth-child(1){
