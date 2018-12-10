@@ -17,13 +17,6 @@ var home=(function(){
             $('.s_erji').mouseenter(function(){
                 $('.nav_list').css({display:'block'})
             })
-            // document.on('mouseleave',function(event){
-            //     var target = $(event.target);
-            //     if(event.target!==$('.nav_list')){
-
-            //         $('.nav_list').css({display:'none'})
-            //     }
-            // })
         }
     }
 }())

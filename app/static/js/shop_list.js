@@ -1,12 +1,10 @@
 var shopList = (function () {
-    // const dl=$('.gallery_grid')
     var $box = document.querySelector('.s_box');
     var $box1=document.querySelector('.s_box1') 
     return {
         init() {
             console.log($box)
             this.gatDate();
-            // this.event();
         },
         event() {
             var _this = this;
@@ -51,7 +49,7 @@ var shopList = (function () {
                     this.data = res.data;
                     this.insertDate(res.data)
                 } else {
-                    // alert('信息错误');
+                    alert('信息错误');
                 }
             }, 'json')
         },
