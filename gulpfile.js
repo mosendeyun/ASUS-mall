@@ -56,7 +56,7 @@ gulp.task('miniimg',function(){
 //监听实时更新
 gulp.task('watch',function(){
     gulp.watch('app/static/js/*.js',['minijs'])
-    gulp.watch('app/static/css/*.css',['minicss'])
+    gulp.watch('app/static/**/*.css',['minicss'])
     gulp.watch('app/static/images/*',['miniimg'])
     gulp.watch('app/*.html',['minihtml'])
 })
@@ -64,7 +64,7 @@ gulp.task('watch',function(){
 //打开服务器
 gulp.task('connect',function(){
     connect.server({
-        root: 'dist',//服务器默认文件夹
+        root: 'app',//服务器默认文件夹
         port: '7777',//端口号
         livereload: true
     })

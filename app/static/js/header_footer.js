@@ -14,8 +14,15 @@ var home=(function(){
             }).mouseleave(function(){
                 $('.minicart_cont').css({display:'none'})
             })
-            $('.s_erji').mouseenter(function(){
+            $('.s_parent1').mouseenter(function(){
                 $('.nav_list').css({display:'block'})
+            }).mouseleave(function(){
+                $('.nav_list').css({display:'none'})
+            })
+            $('.nav_list').mouseenter(function(){
+                $('.nav_list').css({display:'block'})
+            }).mouseleave(function(){
+                $('.nav_list').css({display:'none'})
             })
         }
     }

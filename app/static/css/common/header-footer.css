@@ -283,6 +283,10 @@
 #s_top .s_nav .nav_list ul li a p {
   padding-top: 5px;
 }
+#s_top .s_nav .nav_list .child_nav_2,
+#s_top .s_nav .nav_list .child_nav_3 {
+  display: none;
+}
 #s_bottom .s_service,
 #s_bottom .s_helper {
   background-color: #fafafa;
