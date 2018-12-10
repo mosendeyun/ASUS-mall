@@ -48,8 +48,8 @@ var fdj = (function () {
             $('.uu li').click(function () {
                 console.log($(this).index());
                 console.log(img);
-                img.src = `../images/w${$(this).index() + 1}.jpg`;
-                img2.src = `../images/w${$(this).index() + 1}.jpg`;
+                img.src = `static/images/w${$(this).index() + 1}.jpg`;
+                img2.src = `static/images/w${$(this).index() + 1}.jpg`;
             })
         },
         showImg() {
