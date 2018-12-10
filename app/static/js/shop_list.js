@@ -26,7 +26,12 @@ var shopList = (function () {
                 $(this).children().toggleClass("s_col")
             })
             $('.action_more').click(function () {
-                $('.filter_entries').slideDown("900")
+                $('.s_hidens').toggleClass("hide")
+                if($('.s_hidens').hasClass('hide')){
+                    $('.action_more i').addClass('asus-down')
+                }else{
+                    $('.action_more i').addClass('asus-xiangshang')
+                }
             })
             $('.flip2').click(_=>{
                 $(this).toggleClass('active')

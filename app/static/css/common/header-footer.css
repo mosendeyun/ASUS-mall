@@ -67,6 +67,7 @@
   display: none;
   max-height: 180px;
   overflow: hidden;
+  z-index: 11;
 }
 #s_top .s_topbar .s_page .s_right ul .s_member .s_men_fast .s_link {
   line-height: 30px;
@@ -77,6 +78,9 @@
 }
 #s_top .s_topbar .s_page .s_right ul .s_member .s_men_fast .s_link:hover {
   background: #ccc;
+}
+#s_top .s_topbar .s_page .s_right ul .s_member:hover .s_men_fast {
+  display: block;
 }
 #s_top .s_topbar .s_page .s_right ul .s_cart {
   padding-right: 0;
@@ -102,6 +106,27 @@
   left: 6px;
   top: 0px;
   font-size: 20px;
+}
+#s_top .s_topbar .s_page .s_right ul .s_cart .s_minicart .minicart_cont {
+  min-width: 303px;
+  max-height: 300px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 10;
+  display: none;
+  text-align: left;
+  line-height: 18px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ccc;
+  padding-top: 10px;
+}
+#s_top .s_topbar .s_page .s_right ul .s_cart .s_minicart .minicart_cont p {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #000;
 }
 #s_top .s_nav {
   padding-top: 23px;
@@ -221,6 +246,41 @@
 }
 #s_top .s_nav .s_navcon .s_search .s_searchbar .s_host a:hover {
   color: #0563c3;
+}
+#s_top .s_nav .nav_list {
+  min-height: 89px;
+  background-color: #fff;
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  transition: all 0.4s ease-in-out;
+}
+#s_top .s_nav .nav_list ul {
+  width: 1226px;
+  background-color: #fff;
+  min-height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#s_top .s_nav .nav_list ul li {
+  width: 175px;
+  height: 80px;
+  float: left;
+  text-align: center;
+  opacity: .5;
+}
+#s_top .s_nav .nav_list ul li a {
+  color: #333;
+  font-size: 14px;
+}
+#s_top .s_nav .nav_list ul li a img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+#s_top .s_nav .nav_list ul li a p {
+  padding-top: 5px;
 }
 #s_bottom .s_service,
 #s_bottom .s_helper {

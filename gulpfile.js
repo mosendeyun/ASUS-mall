@@ -76,8 +76,8 @@ gulp.task('connect', function () {
 //监听文件;
 gulp.task('watch', function () {
     // 监听指定文件,如果文件改变;重新执行指定任务;
-    gulp.watch('app/*.html') 
-    gulp.watch('app/**/*.js')
+    gulp.watch('app/*.html','minihtml') 
+    gulp.watch('app/**/*.js' 'minijs')
 });
 
 //删除指定文件夹;
