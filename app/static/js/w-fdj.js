@@ -90,19 +90,6 @@ var shuliang = (function () {
     }
 }())
 
-var link = (function () {
-    var $liAll = $('.center1 li');
-    return {
-        init() {
-            this.event();
-        },
-        event() {
-            console.log($liAll);
-        }
-    }
-}())
-
-
 var djs = (function () {
     return {
         init() {
@@ -174,6 +161,22 @@ var xhj = (function () {
                     img.style.display = "none";
                 }
             }
+        }
+    }
+}())
+
+var link = (function () {
+    var $liAll = $('.center1 li');
+    var $boxAll = $('.center2-1');
+    return {
+        init() {
+            this.event();
+        },
+        event() {
+            $liAll.mouseenter(function () {
+                console.log($(this).index());
+                $boxAll.eq($(this).index()).show().siblings().hide();
+            })
         }
     }
 }())
