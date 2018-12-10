@@ -68,15 +68,15 @@ $(function () {
                                 $('#check').prop('checked', true);
                                 $(".c-login2").click(function () {
                                     var number = $(".c-phone2").val();
-                                    $.get("http://localhost:1810/ASUS-mall/server/php/zhuce.php",
+                                    $.get("http://10.36.141.149:1810/ASUS-mall/server/php/zhuce.php",
                                         {
                                             val: number
                                         },
                                         function (data) {
-                                            setInterval(function () {
-                                
-                                                location.href = "http://localhost:1810/ASUS-mall/app/denglu.html"
-                                            }, 2000)
+                                           
+                                            setTimeout(() => {  
+                                                location.href = "http://10.36.141.149:1810/ASUS-mall/app/denglu.html"
+                                            }, 1000)
                                         }
                                     )
                                 })

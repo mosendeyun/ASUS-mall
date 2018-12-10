@@ -40,6 +40,7 @@ $(function () {
                     }
                     console.log("正确马上给你发送验证码");
                     $(this).html(ol());
+                   
                 } else {
                     $(".hefa").show().delay(1200).hide(0);
                 }
@@ -81,14 +82,21 @@ $(function () {
 
 
                         $.post(
-                            "http://localhost:1810/ASUS-mall/server/php/denglu.php",
+                            "http://10.36.141.149:1810/ASUS-mall/server/php/denglu.php",
                             { "phone_number": phone },
                             function (res) {
-                                // res=JSON.parse(res);
+                             
+                                res=Number(res);
                                 console.log(res);
                                 if(res){
                                     console.log($("#tiaozhuan"));
-                                        $("#tiaozhuan").show();
+                                    $("#tiaozhuan").html("页面即将跳转");
+                                        $("#tiaozhuan").show().delay(1500).hide(0);
+                                        document.cookie=`username=${phone}`
+                                }
+                                else{
+                                    $("#tiaozhuan").html("先注册再登录");
+                                    $("#tiaozhuan").show().delay(1500).hide(0);
                                 }
                             }
                         )
