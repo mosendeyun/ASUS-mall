@@ -92,7 +92,7 @@ gulp.task('clean',()=>{
     del(['dist','rev'])
 })
 
-gulp.task('default', ['connect','watch']);
+gulp.task('default', ['watch','connect']);
 
 //项目初始;按[]的任务顺序从左到右依次执行;
 gulp.task('start',['minijs','minimg','minihtml','watch','connect'])
