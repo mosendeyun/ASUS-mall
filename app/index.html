@@ -10,21 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="static/css/common/reset.css">
     <link rel="stylesheet" href="static/css/common/header-footer.css">
-    <link rel="stylesheet" href="./static/css/game.css">
+    <link rel="stylesheet" href="static/css/game.css">
 </head>
 
 <body>
     <header id="s_top"></header>
-
+    <div class="c-bigwrap clearfix"></div>
     <footer id="s_bottom" class="bton"></footer>
+    <div id="s_floatbox"></div>
+
     <script src="static/js/jquery.js"></script>
     <script src="static/js/header_footer.js"></script>
+    <script src="static/js/c-game.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#s_top').load('header-footer.html #s_top');
-            $('#s_bottom').load('header-footer.html #s_bottom');
-            $('#s_floatbox').load('header-footer.html #s_floatbox');
+        $('#s_top').load('header-footer.html #s_top', function fn() {
+            home.init()
         });
+        $('.c-bigwrap').load('main.html .c-bigwrap',function(){
+           game.init()
+        })
+        $('#s_bottom').load('header-footer.html #s_bottom',)
+        $('#s_floatbox').load('header-footer.html #s_floatbox')
     </script>
 </body>
 

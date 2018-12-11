@@ -1,6 +1,6 @@
 var shopList = (function () {
     var $box = document.querySelector('.s_box');
-    var $box1=document.querySelector('.s_box1') 
+    var $box1 = document.querySelector('.s_box1')
     return {
         init() {
             console.log($box)
@@ -14,10 +14,10 @@ var shopList = (function () {
                 if (target.nodeName === 'A' && target.className == 'btn cart_add') {
                     let father = target.parentNode.parentNode;
                     let count = 1;
-
                     console.log(count)
                     _this.data[father.index].count = count;
-                    _this.addCar(_this.data[father.index])
+                    _this.show(_this.data[father.index])
+        
                 }
             }
             $('.collect').click(function () {
@@ -25,21 +25,27 @@ var shopList = (function () {
             })
             $('.action_more').click(function () {
                 $('.s_hidens').toggleClass("hide")
-                if($('.s_hidens').hasClass('hide')){
+                if ($('.s_hidens').hasClass('hide')) {
                     $('.action_more i').addClass('asus-down')
-                }else{
+                } else {
                     $('.action_more i').addClass('asus-xiangshang')
                 }
             })
-            $('.flip2').click(_=>{
+            $('.flip2').click(_ => {
                 $(this).toggleClass('active')
                 $('.s_box1').show()
                 $('.s_box').hide()
             })
-            $('.flip1').click(_=>{
+            $('.flip1').click(_ => {
                 $(this).toggleClass('active')
                 $('.s_box').show()
                 $('.s_box1').hide()
+            })
+            $('.cart_add').click(function () {
+                $('#s_popbox').show()
+            })
+            $('.dailog_button_close').click(function () {
+                $('#s_popbox').hide()
             })
         },
         gatDate() {
@@ -52,6 +58,12 @@ var shopList = (function () {
                     alert('信息错误');
                 }
             }, 'json')
+        },
+        show(data) {
+            $('.dailog_button').click(_ => {
+                this.addCar(data)
+                $('#s_popbox').hide()
+            })
         },
         insertDate(data) {
             for (let i = 0; i < data.length; i++) {
@@ -71,9 +83,9 @@ var shopList = (function () {
                         <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
                     </dd>
               `
-                if (i <=15) {
+                if (i <= 15) {
                     $box.appendChild($dl)
-                }else if(i>15){
+                } else if (i > 15) {
                     $box1.appendChild($dl)
                 }
             }
@@ -85,7 +97,7 @@ var shopList = (function () {
             shopList = JSON.parse(shopList);
             for (var i = 0; i < shopList.length; i++) {
                 if (data.id == shopList[i].id) {
-                    shopList[i].count +=data.count;
+                    shopList[i].count += data.count;
                     break;
                 }
             }

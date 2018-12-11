@@ -6,7 +6,6 @@ var shopCar = (function () {
             this.getData();
             this.delsql(false)
             this.close();
-            this.show()
         },
         event() {
             var _this = this;
@@ -157,10 +156,11 @@ var shopCar = (function () {
             $('.total_price b').html(total)
             this.event()
         },
-        show(){
+        show(pNode){
             $('.dailog_button').click(_=>{
-                // console.log(1)
-                this.delsql(1)
+                     this.data.splice(pNode.index, 1);
+                    pNode.remove();
+                    localStorage.shopList = JSON.stringify(this.data)
                 $('#s_popbox').hide()
             })
         },
@@ -176,13 +176,7 @@ var shopCar = (function () {
                 event.stopPropagation()
                 $('#s_popbox').show()
                 var pNode = $(this).parent().parent().parent()
-                if(bool){
-                    _this.data.splice(pNode.index, 1);
-                    pNode.remove();
-                    localStorage.shopList = JSON.stringify(_this.data)
-                }else{
-                    bool=false
-                }
+                _this.show(pNode)
             })
         }
     }

@@ -302,3 +302,83 @@
 #s_main .s_maincon .s_section .s_pag .gallery_show .pageview .next {
   padding: 0 5px;
 }
+#s_popbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#s_popbox .s_popup {
+  width: 550px;
+  height: 280px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -275px;
+  margin-top: -140px;
+  z-index: 10001;
+}
+#s_popbox .s_popup .dailog_content {
+  font-size: 36px;
+  line-height: 36px;
+  color: #262626;
+  text-align: center;
+  width: 445px;
+  margin-left: 54px;
+  margin-top: 74px;
+}
+#s_popbox .s_popup .dailog_content .fonst {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #00a8ff;
+  color: #fff;
+  margin-right: 5px;
+}
+#s_popbox .s_popup .minicon_caution_info {
+  font-size: 18px;
+  color: #808080;
+  text-align: center;
+  margin-top: 30px;
+}
+#s_popbox .s_popup .minicon_caution_info em {
+  padding: 0 5px;
+  font-size: 24px;
+  color: #00a8ff;
+}
+#s_popbox .s_popup .minicon_caution_info .price {
+  font-size: 24px;
+  color: #00a8ff;
+}
+#s_popbox .s_popup .cuo {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  font-size: 36px;
+  cursor: pointer;
+}
+#s_popbox .s_popup button {
+  width: 120px;
+  height: 36px;
+  border: 1px solid #aaaaaa;
+  position: absolute;
+  bottom: 30px;
+  color: #808080;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#s_popbox .s_popup .dailog_button {
+  left: 146px;
+}
+#s_popbox .s_popup .dailog_button_close {
+  left: 280px;
+  border: none;
+  background-color: #00a8ff;
+  color: #fff;
+}
