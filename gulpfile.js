@@ -25,30 +25,30 @@ gulp.task('default', function(callback) {
 //压缩js
 gulp.task('minijs',function(){
     gulp.src('app/static/js/*.js')
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/static/js'))
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+    // .pipe(uglify())
+    // .pipe(gulp.dest('dist/static/js'))
     .pipe(connect.reload())
 })
 //压缩css
 gulp.task('minicss',function(){
     gulp.src('app/static/**/*.css')
-    .pipe(minicss())
-    .pipe(gulp.dest('dist/static/css'))
+    // .pipe(minicss())
+    // .pipe(gulp.dest('dist/static/css'))
     .pipe(connect.reload())
 })
 //压缩HTML
 gulp.task('minihtml',function(){
     gulp.src('app/*.html')
-    .pipe(gulp.dest('dist'))
+    // .pipe(gulp.dest('dist'))
     .pipe(connect.reload())//实时刷新
 })
 //图片压缩
 gulp.task('miniimg',function(){
     gulp.src('app/static/images/*')
-    .pipe(gulp.dest('dist/static/images'))
+    // .pipe(gulp.dest('dist/static/images'))
     .pipe(connect.reload())
 })
 
