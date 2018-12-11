@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_rqzc1fx6zco.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="static/css/common/reset.css">
+    <link rel="stylesheet" href="static/css/common/header-footer.css">
+    <link rel="stylesheet" href="./static/css/game.css">
+</head>
+
+<body>
+    <header id="s_top"></header>
+
+    <footer id="s_bottom" class="bton"></footer>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/header_footer.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#s_top').load('header-footer.html #s_top');
+            $('#s_bottom').load('header-footer.html #s_bottom');
+            $('#s_floatbox').load('header-footer.html #s_floatbox');
+        });
+    </script>
+</body>
+
+</html>
