@@ -137,6 +137,7 @@
 /* ------------------------------------------------ */
 .w-link{
     margin:0 auto;
+    background-color: #f2f2f2;
 }
 .w-link1{
     height: 312px;
@@ -150,6 +151,7 @@
     /* border: 1px solid black; */
     position: relative;
     text-align: center;
+    background: white;
 }
 .link2{
     height: 204px;
