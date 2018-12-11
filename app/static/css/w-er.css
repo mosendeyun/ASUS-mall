@@ -7,6 +7,13 @@
 .fl{
     float: left;
 }
+.w{
+	width: 1042px;
+    height: 500px;
+    position: absolute;
+    top:100px;
+    left: 20px;;
+}
 .w-er{
     width: 1042px;
     height: 500px;
@@ -57,10 +64,19 @@
     height: 500px;
     left: 0;
     top: 0;
+    /*border:1px solid red;*/
     /* background: aqua; */
     display: none;
 }
 /* --------------------------- */
+.w-er2 li{
+	height: 61px;
+	width: 100%;
+	line-height: 61px;
+	padding-left: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
 .w-er2-1-1{
     height: 500px;
     width: 300px;
@@ -74,7 +90,7 @@
 .w-er2-1-2 li{
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
     padding-left:10px;
 }
 .w-er2-1-2 li span{
@@ -90,3 +106,27 @@
     height: 500px;
     background: url(../images/w7.jpg) center;
 }
+
+/*________*/
+.w-er2-2{
+	display: block;
+}
+.w-er-2-2-1{
+	height: 500px;
+    width: 400px;
+    /*border: 1px solid aqua;*/
+}
+.w-er-2-2-2{
+	width: 100%;
+	height: 100%;
+}
+.w-er-2-2-2 .w-er-2-2-3{
+	margin-right: 30px;
+}
+.w-er-2-2-2 a{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+	font-size: 14px;
+}
+

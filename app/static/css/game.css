@@ -3,12 +3,13 @@
     background-color: #f2f2f2;
     margin-top: 50px;
     padding-top: 5px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 .game1{
     padding-top: 30px;
+    margin-bottom: 30px;
     height: 717px;
-    width: 100%;
+    width: 1226px;
     margin: 0 auto;
     background: #f2f2f2;
     box-sizing: border-box;
@@ -52,7 +53,7 @@
         min-width: 770px;
         min-height: 630px;
         width: 777px;
-        height: 665px;
+        height: 630px;
         float: left;
         background: #fff;
 }
@@ -82,6 +83,100 @@
     background-color: #00a8ff;
     /* border-right: 1px solid #00a8ff; */
 }
+
+.middle-game .tab-head .game2-show {
+    width: 259px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #242424;
+    float: left;
+    background-color: #e0e0e0;
+    cursor: pointer;
+
+}
+.middle-game .tab-head .game2-show:hover{
+color: #fff;
+background-color: #00a8ff;
+/* border-right: 1px solid #00a8ff; */
+}
+
+.middle-game .tab-head .game3-show {
+    width: 259px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #242424;
+    float: left;
+    background-color: #e0e0e0;
+    cursor: pointer;
+
+}
+.middle-game .tab-head .game3-show:hover{
+color: #fff;
+background-color: #00a8ff;
+/* border-right: 1px solid #00a8ff; */
+}
+
+
+.middle-game .tab-head .game4-show {
+    width: 259px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #242424;
+    float: left;
+    background-color: #e0e0e0;
+    cursor: pointer;
+
+}
+.middle-game .tab-head .game4-show:hover{
+color: #fff;
+background-color: #00a8ff;
+/* border-right: 1px solid #00a8ff; */
+}
+
+
+
+.middle-game .tab-head .game5-show {
+    width: 259px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #242424;
+    float: left;
+    background-color: #e0e0e0;
+    cursor: pointer;
+
+}
+.middle-game .tab-head .game5-show:hover{
+color: #fff;
+background-color: #00a8ff;
+/* border-right: 1px solid #00a8ff; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .tab-body {
@@ -281,6 +376,7 @@
         height: 34px;
         border-radius: 50%;
         background: #00a8ff;
+        color: rgb(12, 11, 11);
 }
 .defrent .picturn {
     float: left;
@@ -320,6 +416,8 @@
 
 
 /* //右边图片初始的样式 */
+
+
 .init {
     border-bottom: 1px solid #f2f2f2;
     height: 53px;
@@ -333,7 +431,7 @@
     height: 40px;
     line-height: 40px;
     text-align: center;
-    /* font-size: 14px; */
+    font-size: 14px;
     color: #00a8ff;
 }
 .init .info-right {
@@ -353,5 +451,189 @@
     font-size: 100%;
 }
 .init .picturn{
+    display: none;
+}
+
+/* //if */
+.init1 {
+    border-bottom: 1px solid #f2f2f2;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 6px;
+}
+.init1 span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #00a8ff;
+}
+.init1 .info-right {
+    float: left;
+    width: 149px;
+    /* font-size: 14px; */
+    line-height: 40px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.init1 .info-right h3{
+    margin-bottom: 0;
+    font-weight: 400;
+    max-height: 50px;
+    /* _height: 50px; */
+    overflow: hidden;
+    font-size: 100%;
+}
+.init1 .picturn{
+    display: none;
+}
+
+
+
+/* 2f */
+.init2 {
+    border-bottom: 1px solid #f2f2f2;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 6px;
+}
+.init2 span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #00a8ff;
+}
+.init2 .info-right {
+    float: left;
+    width: 149px;
+    /* font-size: 14px; */
+    line-height: 40px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.init2 .info-right h3{
+    margin-bottom: 0;
+    font-weight: 400;
+    max-height: 50px;
+    /* _height: 50px; */
+    overflow: hidden;
+    font-size: 100%;
+}
+.init2 .picturn{
+    display: none;
+}
+/* 3f */
+.init3 {
+    border-bottom: 1px solid #f2f2f2;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 6px;
+}
+.init3 span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #00a8ff;
+}
+.init3 .info-right {
+    float: left;
+    width: 149px;
+    /* font-size: 14px; */
+    line-height: 40px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.init3 .info-right h3{
+    margin-bottom: 0;
+    font-weight: 400;
+    max-height: 50px;
+    /* _height: 50px; */
+    overflow: hidden;
+    font-size: 100%;
+}
+.init3 .picturn{
+    display: none;
+}
+/* 4f */
+.init4{
+    border-bottom: 1px solid #f2f2f2;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 6px;
+}
+.init4 span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #00a8ff;
+}
+.init4 .info-right {
+    float: left;
+    width: 149px;
+    /* font-size: 14px; */
+    line-height: 40px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.init4 .info-right h3{
+    margin-bottom: 0;
+    font-weight: 400;
+    max-height: 50px;
+    /* _height: 50px; */
+    overflow: hidden;
+    font-size: 100%;
+}
+.init4 .picturn{
+    display: none;
+}
+/* 5f */
+.init5{
+    border-bottom: 1px solid #f2f2f2;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 6px;
+}
+.init5 span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #242424;
+}
+.init5 .info-right {
+    float: left;
+    width: 159px;
+    
+    line-height: 40px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.init5 .info-right h3{
+    margin-bottom: 0;
+    font-weight: 400;
+    max-height: 50px;
+   
+    overflow: hidden;
+    font-size: 100%;
+}
+.init5 .picturn{
     display: none;
 }
