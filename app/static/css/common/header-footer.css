@@ -214,6 +214,30 @@
 #s_top .s_nav .s_navcon .s_search .s_searchbar form .btn i:hover {
   color: #fff;
 }
+#s_top .s_nav .s_navcon .s_search .s_searchbar form ul {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  z-index: 100;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: #ccc;
+  display: none;
+}
+#s_top .s_nav .s_navcon .s_search .s_searchbar form ul li {
+  height: 30px;
+  width: 300px;
+  font-size: 12px;
+  color: #333;
+  line-height: 30px;
+}
+#s_top .s_nav .s_navcon .s_search .s_searchbar form ul li:hover {
+  background: #eee;
+}
+#s_top .s_nav .s_navcon .s_search .s_searchbar form ul .current {
+  background: #ccc;
+}
 #s_top .s_nav .s_navcon .s_search .s_searchbar form .btn:hover {
   background: #3440e9;
 }
@@ -258,7 +282,7 @@
   display: none;
 }
 #s_top .s_nav .nav_list ul {
-  width: 1226px;
+  width: 1260px;
   background-color: #fff;
   min-height: 50px;
   margin: 0 auto;
@@ -269,11 +293,11 @@
   height: 80px;
   float: left;
   text-align: center;
-  opacity: .5;
+  opacity: 1;
 }
 #s_top .s_nav .nav_list ul li a {
-  color: #333;
   font-size: 14px;
+  color: #333;
 }
 #s_top .s_nav .nav_list ul li a img {
   width: 40px;
@@ -283,9 +307,56 @@
 #s_top .s_nav .nav_list ul li a p {
   padding-top: 5px;
 }
-#s_top .s_nav .nav_list .child_nav_2,
-#s_top .s_nav .nav_list .child_nav_3 {
+#s_top .s_nav .nav_list ul li a:hover {
+  color: #0563c3;
+}
+#s_top .s_nav .nav_list ul li:hover {
+  opacity: 0.5;
+}
+#s_top .s_nav .nav_list .animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+#s_top .s_nav .hot_show {
+  min-height: 80px;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  padding-top: 15px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  z-index: 7777;
   display: none;
+}
+#s_top .s_nav .hot_show .hot_activity {
+  position: relative;
+  width: 1226px;
+  height: 180px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 0 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 8888;
+}
+#s_top .s_nav .hot_show .hot_activity .js_hotactivity {
+  width: 1400px;
+}
+#s_top .s_nav .hot_show .hot_activity .js_hotactivity li {
+  padding: 0 17px 5px 0;
+  width: 190px;
+  min-height: 130px;
+  text-align: left;
+  float: left;
+  cursor: default;
+}
+#s_top .s_nav .hot_show .hot_activity .js_hotactivity li img {
+  width: 190px;
+  height: 130px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+#s_top .s_nav .hot_show .hot_activity .js_hotactivity li p {
+  padding-top: 3px;
 }
 #s_bottom .s_service,
 #s_bottom .s_helper {
