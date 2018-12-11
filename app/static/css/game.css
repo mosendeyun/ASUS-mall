@@ -84,8 +84,18 @@
     /* border-right: 1px solid #00a8ff; */
 }
 
-.middle-game .tab-head .game2-show {
-    width: 259px;
+
+.middle-game .f2 {
+    width: 777px;
+    height: 40px;
+}
+.middle-game .f2 ul{
+    width: 777px;
+    height: 40px;
+
+}
+.middle-game .f2 .game2-show {
+    width: 155.4px;
     height: 40px;
     font-size: 16px;
     line-height: 40px;
@@ -96,11 +106,13 @@
     cursor: pointer;
 
 }
-.middle-game .tab-head .game2-show:hover{
+.middle-game .f2 .game2-show:hover{
 color: #fff;
 background-color: #00a8ff;
-/* border-right: 1px solid #00a8ff; */
+
 }
+
+
 
 .middle-game .tab-head .game3-show {
     width: 259px;
@@ -158,26 +170,6 @@ color: #fff;
 background-color: #00a8ff;
 /* border-right: 1px solid #00a8ff; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .tab-body {
         width: 777px;
@@ -620,7 +612,7 @@ background-color: #00a8ff;
 }
 .init5 .info-right {
     float: left;
-    width: 159px;
+    width: 149px;
     
     line-height: 40px;
     margin-bottom: 9px;
@@ -630,10 +622,13 @@ background-color: #00a8ff;
     margin-bottom: 0;
     font-weight: 400;
     max-height: 50px;
-   
+   font-size: 14px;
     overflow: hidden;
     font-size: 100%;
 }
 .init5 .picturn{
+    display: none;
+}
+.init5 .picturn a img {
     display: none;
 }

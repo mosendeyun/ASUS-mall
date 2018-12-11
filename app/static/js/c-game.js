@@ -28,6 +28,8 @@ $(function () {
         $(".game-body2f2").show();
         $(".game-body2f1").hide();
         $(".game-body2f3").hide();
+        $(".game-body2f4").hide();
+        $(".game-body2f5").hide();
 
     })
     $(".f2 .game2-show").eq(0).on("mouseenter", function () {
@@ -35,6 +37,9 @@ $(function () {
         $(".game-body2f1").show();
         $(".game-body2f2").hide();
         $(".game-body2f3").hide();
+        $(".game-body2f4").hide();
+        $(".game-body2f5").hide();
+        
 
 
     })
@@ -43,7 +48,24 @@ $(function () {
         $(".game-body2f1").hide();
         $(".game-body2f2").hide();
         $(".game-body2f3").show();
-
+        $(".game-body2f4").hide();
+        $(".game-body2f5").hide();
+    })
+    $(".f2 .game2-show").eq(3).on("mouseenter", function () {
+        console.log(1232131);
+        $(".game-body2f1").hide();
+        $(".game-body2f2").hide();
+        $(".game-body2f3").hide();
+        $(".game-body2f4").show();
+        $(".game-body2f5").hide();
+    })
+    $(".f2 .game2-show").eq(4).on("mouseenter", function () {
+        console.log(1232131);
+        $(".game-body2f1").hide();
+        $(".game-body2f2").hide();
+        $(".game-body2f3").hide();
+        $(".game-body2f4").hide();
+        $(".game-body2f5").show();
     })
     //3f
 
