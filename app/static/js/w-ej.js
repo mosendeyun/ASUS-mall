@@ -8,13 +8,17 @@ var er = (function () {
             this.event();
         },
         event() {
-            // console.log(boxAll)
+
             $liAll.mouseover(function () {
+                $('.w-er2').show();
                 console.log($(this).index());
                 $boxAll.eq($(this).index()).show().siblings('div').hide();
                 $boxAll.mouseover(function () {
                     $(this).show();
                 })
+                // $all.mouseover(function(){
+                //     $boxAll.eq(_this).show();
+                // })
             })
             $all.mouseout(function () {
                 $boxAll.hide();
