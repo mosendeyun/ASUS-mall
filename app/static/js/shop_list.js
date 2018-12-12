@@ -73,7 +73,7 @@ var shopList = (function () {
                 $dl.innerHTML = `
                     <dt class="goods_pic"><img src="static/images/list${i + 1}.jpg" alt=""></dt>
                     <dd class="goods_info"> 
-                        <h3 class="goods_name"><a href="javascript: ;">${data[i].name}</a></h3>
+                        <h3 class="goods_name"><a href="w-fangdajing.html">${data[i].name}</a></h3>
                         <p class="price">￥${data[i].price}</p>
                     </dd>
                     <dd class="goods_buy">

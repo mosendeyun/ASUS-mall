@@ -52,6 +52,7 @@
   width: 100px;
   text-align: center;
   position: relative;
+  display: none;
 }
 #s_top .s_topbar .s_page .s_right ul .s_member i {
   font-size: 18px;

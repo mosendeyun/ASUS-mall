@@ -8,27 +8,39 @@
     <title>Document</title>
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_rqzc1fx6zco.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
     <link rel="stylesheet" href="static/css/common/reset.css">
     <link rel="stylesheet" href="static/css/common/header-footer.css">
+    <link rel="stylesheet" href="static/css/w-center.css">
     <link rel="stylesheet" href="static/css/game.css">
 </head>
 
 <body>
+<!-- 公共头部 -->
     <header id="s_top"></header>
-    <div class="c-bigwrap clearfix"></div>
-    <footer id="s_bottom" class="bton"></footer>
+<!-- 特色专题 -->
+    <div id="special_topic"></div>
+<!-- 游戏专区 -->
+<div id="c_games"></div>
+<!-- 服务产品 -->
+    <div id="service_products"></div>
+<!-- 公共尾部 -->
+    <footer id="s_bottom" class="bton"></footer>    
+<!-- 悬浮窗 -->
     <div id="s_floatbox"></div>
-
     <script src="static/js/jquery.js"></script>
     <script src="static/js/header_footer.js"></script>
+    <script src="static/js/w-ej.js"></script>
     <script src="static/js/c-game.js"></script>
     <script>
         $('#s_top').load('header-footer.html #s_top', function fn() {
             home.init()
         });
-        $('.c-bigwrap').load('main.html .c-bigwrap',function(){
+        $('#special_topic').load('w-center.html #special_topic')
+        $('#c_games').load('main.html #c_games',function(){
            game.init()
         })
+        $('#service_products').load('w-center.html #service_products')
         $('#s_bottom').load('header-footer.html #s_bottom',)
         $('#s_floatbox').load('header-footer.html #s_floatbox')
     </script>

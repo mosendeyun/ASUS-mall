@@ -1,5 +1,5 @@
-*{
-    box-sizing: border-box;
+body{
+    color: rgb(102, 102, 102);
 }
 .clear:after{
     display: block;
@@ -23,7 +23,7 @@
 .fdj .header{
     
     height: 1129px;
-    /* border: 1px solid yellow; */
+    background:#fff;
 }
 .header1{
     font-size: 14px;
@@ -343,6 +343,7 @@
 .header6-1-1 {
     font-size: 22px;
     margin-bottom: 5px;
+    width:100px;
 }
 .header6-2-1{
     height: 37px;
@@ -415,17 +416,28 @@
     float: left;
     width: 238px;
     height: 40px;
-    background: #00a8ff;
     margin-right:10px;
     border-radius: 10px;
     text-align: center;
     line-height: 40px;
     font-size: 15px;
+    border:1px solid #00a8ff;
+}
+.header8-1-2 li:first-child{
+    background: #00a8ff;
+    color:#fff;
 }
 /* ---------------------------- */
+.center{
+    background:#eee;
+    padding-bottom:30px;
+}
 .center1{
     height: 60px;
-    /* border: 1px solid black; */
+    width:1226px;
+    position: absolute;
+    top:1267px;
+    border-bottom: 1px solid #ccc;
 }
 .center1 li{
     float: left;
@@ -434,12 +446,15 @@
     line-height: 60px;
 }
 .center1 li:hover{
-    border-top: 1px solid aqua;
+    border-bottom: 1px solid aqua;
 }
 .center2{
+    width:1226px;
     position: relative;
+    margin-top:80px;
 }
 .center2-1{
+    padding-top:20px;
     display: none;
 }
 .center2 .center2-1:nth-child(1){
