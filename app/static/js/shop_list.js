@@ -14,10 +14,9 @@ var shopList = (function () {
                 if (target.nodeName === 'A' && target.className == 'btn cart_add') {
                     let father = target.parentNode.parentNode;
                     let count = 1;
-                    console.log(count)
+                    console.log(_this.data[father.index])
                     _this.data[father.index].count = count;
-                    _this.show(_this.data[father.index])
-        
+                    _this.show(_this.data[father.index])       
                 }
             }
             $('.collect').click(function () {
@@ -62,6 +61,7 @@ var shopList = (function () {
         show(data) {
             $('.dailog_button').click(_ => {
                 this.addCar(data)
+                console.log(data)
                 $('#s_popbox').hide()
             })
         },
@@ -104,6 +104,7 @@ var shopList = (function () {
             if (i == shopList.length) {
                 shopList.push(data);
             }
+            console.log(shopList)
             localStorage.shopList = JSON.stringify(shopList);
         }
     }

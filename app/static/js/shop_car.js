@@ -87,6 +87,7 @@ var shopCar = (function () {
             var shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
             this.data = shopList;
+            console.log(shopList)
             this.insertData(shopList)
 
         },
