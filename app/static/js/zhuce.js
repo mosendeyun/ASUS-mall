@@ -76,7 +76,7 @@ $(function () {
                                            
                                             setTimeout(() => {  
                                                 console.log("跳转过去没")
-                                                location.href = "Login.html"
+                                                location.href = "http://localhost:1810/ASUS-mall/app/denglu.html"
                                             }, 1000)
                                         }
                                     )
