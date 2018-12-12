@@ -3,7 +3,9 @@ var shopList = (function () {
     var $box1 = document.querySelector('.s_box1')
     return {
         init() {
-            console.log($box)
+          this.a=0
+          this.sum=0;
+          this.cot=0;
             this.gatDate();
         },
         event() {
@@ -14,9 +16,9 @@ var shopList = (function () {
                 if (target.nodeName === 'A' && target.className == 'btn cart_add') {
                     let father = target.parentNode.parentNode;
                     let count = 1;
-                    console.log(_this.data[father.index])
+                    // console.log(_this.data[father.index])
                     _this.data[father.index].count = count;
-                    _this.show(_this.data[father.index])       
+                    _this.addCar(_this.data[father.index])       
                 }
             }
             $('.collect').click(function () {
@@ -42,27 +44,36 @@ var shopList = (function () {
             })
             $('.cart_add').click(function () {
                 $('#s_popbox').show()
-            })
-            $('.dailog_button_close').click(function () {
-                $('#s_popbox').hide()
+                let father =$(this).parent().parent().parent()
+                console.log(_this.a)
+                $('.s_popup').html(`
+                    <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
+                    <i class="cuo iconfont asus-cuo"></i>
+                    <p class="minicon_caution_info">目前选购商品共<em>${_this.a}</em>种<em>${_this.cot}</em>件。合计 <i class="price">${_this.sum}</i></p>
+                    <button class="dailog_button">继续购物</button>
+                    <button class="dailog_button_close " style="display: block;"><a href="shop_car.html"> 进入购物车</a></button>
+                `)
+                $('.dailog_button_close').click(function () {
+                    $('#s_popbox').hide()
+                })
+                $('.dailog_button').click(_ => {
+                    $('#s_popbox').hide()
+                })
+                $('.cuo').click(_=>{
+                    $('#s_popbox').hide()
+                })
             })
         },
         gatDate() {
-            $.get('http://10.36.141.195:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
-                console.log(res)
+            // $.get('http://10.36.141.195:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
+                $.get('static/json/shop.json', (res) => {
+                // console.log(res)
                 if (res.msg === 200) {
                     this.data = res.data;
                     this.insertDate(res.data)
                 } else {
                     alert('信息错误');
                 }
-            })
-        },
-        show(data) {
-            $('.dailog_button').click(_ => {
-                this.addCar(data)
-                console.log(data)
-                $('#s_popbox').hide()
             })
         },
         insertDate(data) {
@@ -88,6 +99,8 @@ var shopList = (function () {
                 } else if (i > 15) {
                     $box1.appendChild($dl)
                 }
+               
+               
             }
             this.event()
         },
@@ -104,8 +117,12 @@ var shopList = (function () {
             if (i == shopList.length) {
                 shopList.push(data);
             }
+            this.sum+=shopList[i].price
+            this.cot+=shopList[i].count
+            this.a=shopList.length
             console.log(shopList)
             localStorage.shopList = JSON.stringify(shopList);
+            localStorage.carnum=shopList.length;
         }
     }
 }())

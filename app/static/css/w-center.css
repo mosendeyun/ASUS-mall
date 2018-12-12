@@ -94,13 +94,12 @@
 
 .w-c3 {
     width: 100%;
-    height: 400px;
+    height:370px;
 }
 
 .w-c3-1 li {
     text-align: center;
     float: left;
-    /* height: 400px; */
     height: 330px;
     width: 243px;
     border: 1px solid #cccccc;

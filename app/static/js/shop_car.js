@@ -4,16 +4,36 @@ var shopCar = (function () {
     return {
         init() {
             this.getData();
-            this.delsql(false)
-            this.close();
+            // this.delsql(false)
+            // this.close();
         },
         event() {
             var _this = this;
-           
-            // $('.btn_delete').click(function(event){
-            //     event.stopPropagation()
-            //     $('#s_popbox').show()
-            // })
+            $('.cart_action').click(function (event) {
+                event.stopPropagation()
+                var pNode = $(this).parent().parent().parent()
+                $('.s_popup').html(`
+                <p class="dailog_content">确定要删除？</p>
+                <i class="cuo iconfont asus-cuo"></i>
+                <button class="dailog_button">确定</button>
+                <button class="dailog_button_close " style="display: block;">取消</button>
+                `)
+               
+                $('#s_popbox').show()
+                $('.dailog_button').click(_ => {
+                    _this.data.splice(pNode.index, 1);
+                    pNode.remove();
+                    _this.insertData(_this.data)
+                    localStorage.shopList = JSON.stringify(_this.data)
+                    $('#s_popbox').hide()
+                })
+                $('.dailog_button_close').click(function () {
+                    $('#s_popbox').hide()
+                })
+                $('.cuo').click(function () {
+                    $('#s_popbox').hide()
+                })
+            })
             $(".count").blur(function () {
                 let index = $(this).parent().parent().parent().parent().parent().index()
                 let data = _this.data[index];
@@ -26,11 +46,23 @@ var shopCar = (function () {
                 var val = $(this).next().val() * 1
                 --val
                 if (val < 1) {
-                    val=1
-                    $(this).next().val(1)
+                    val = 1
+                    $('.s_popup').html(`
+                    <p class="dailog_content">此商品的最小购买数量为1件</p>
+                    <i class="cuo iconfont asus-cuo"></i>
+                    <button class="dailog_crr">确定</button>
+                    `)
+                    $('#s_popbox').show()
+                    $(this).next().val(val)
                 } else {
                     $(this).next().val(val)
                 }
+                $('.dailog_crr').click(function () {
+                    $('#s_popbox').hide()
+                })
+                $('.cuo').click(function () {
+                    $('#s_popbox').hide()
+                })
                 let index = $(this).parent().parent().parent().parent().parent().index()
                 let data = _this.data[index];
                 data.count = val
@@ -39,24 +71,36 @@ var shopCar = (function () {
             $('.btn_increase').click(function () {
                 var val = $(this).prev().val() * 1
                 ++val
-                if (val < 1) {
-                    val=1
+                if (val > 11) {
+                    val = 11
+                    $('.s_popup').html(`
+                    <p class="dailog_content">达到最大购买数量</p>
+                    <i class="cuo iconfont asus-cuo"></i>
+                    <button class="dailog_crr">确定</button>
+                    `)
+                    $('#s_popbox').show()
                     $(this).prev().val(val)
                 } else {
                     $(this).prev().val(val)
                 }
+                $('.dailog_crr').click(function () {
+                    $('#s_popbox').hide()
+                })
+                $('.cuo').click(function () {
+                    $('#s_popbox').hide()
+                })
                 let index = $(this).parent().parent().parent().parent().parent().index()
                 let data = _this.data[index];
                 data.count = val
                 _this.insertData(_this.data)
             })
-            $("#allcheck").click(function () {                
+            $("#allcheck").click(function () {
                 if ($(this).prop("checked")) {
                     $("[name=checkAll]").prop("checked", true);
                     $(this).prev().addClass('iconfont checkAll asus-gou')
                     $("[name=checkAll]").prev().addClass('iconfont checkAll asus-gou')
                 } else {
-                  
+
                     $("[name=checkAll]").prop("checked", false);
                     $(this).prev().removeClass('iconfont checkAll asus-gou')
                     $("[name=checkAll]").prev().removeClass('iconfont checkAll asus-gou')
@@ -64,9 +108,9 @@ var shopCar = (function () {
             });
             $("[name=checkAll]").click(function () {
                 var bool = true;
-                $(this).prev().toggleClass('iconfont checkAll asus-gou')       
+                $(this).prev().toggleClass('iconfont checkAll asus-gou')
                 $("[name=checkAll]").each(function () {
-                   
+
                     if (!$(this).prop("checked")) {
                         bool = false;
                     }
@@ -78,9 +122,9 @@ var shopCar = (function () {
                     $("#allcheck").prev().removeClass('iconfont checkAll asus-gou')
                 }
             })
-            $('.btn_delete').click(_=>{
-               
-            })          
+            $('.btn_delete').click(_ => {
+
+            })
 
         },
         getData() {
@@ -150,36 +194,36 @@ var shopCar = (function () {
                 cartList.appendChild($div)
                 sum += data[index].count;
                 total += data[index].price * data[index].count;
-                
+
             })
             $('.allNum').html(data.length)
             $('.chooseNum').html(sum)
             $('.total_price b').html(total)
             this.event()
         },
-        show(pNode){
-            $('.dailog_button').click(_=>{
-                     this.data.splice(pNode.index, 1);
-                    pNode.remove();
-                    localStorage.shopList = JSON.stringify(this.data)
+        show(pNode) {
+            $('.dailog_button').click(_ => {
+                this.data.splice(pNode.index, 1);
+                pNode.remove();
+                localStorage.shopList = JSON.stringify(this.data)
                 $('#s_popbox').hide()
             })
         },
-        close(){
-            $('.dailog_button_close').click(function(){
+        close() {
+            $('.dailog_button_close').click(function () {
                 $('#s_popbox').hide()
             })
         },
-        delsql(bool){
-            var _this=this;
-            console.log(bool)
-            $('.cart_action').click(function (event) {
-                event.stopPropagation()
-                $('#s_popbox').show()
-                var pNode = $(this).parent().parent().parent()
-                _this.show(pNode)
-            })
-        }
+        // delsql(bool) {
+        //     var _this = this;
+        //     console.log(bool)
+        //     $('.cart_action').click(function (event) {
+        //         event.stopPropagation()
+        //         $('#s_popbox').show()
+        //         var pNode = $(this).parent().parent().parent()
+        //         _this.show(pNode)
+        //     })
+        // }
     }
 
 }())
