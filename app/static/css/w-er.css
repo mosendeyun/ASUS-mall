@@ -138,6 +138,7 @@
         background: yellow;
         position: absolute;
         top:100px;
+        cursor: pointer;
 }
 .swpier .swiper-container{
     width: 100%;
