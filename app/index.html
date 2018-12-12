@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_rqzc1fx6zco.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_943586_x6ogf4wx0km.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
     <link rel="stylesheet" href="static/css/common/reset.css">
@@ -17,38 +17,70 @@
 </head>
 
 <body>
-<!-- 公共头部 -->
+    <!-- 公共头部 -->
     <header id="s_top"></header>
-<!-- 轮播 -->
+
+    <!-- 轮播导航 -->
     <div id="w_swiper"></div>
-<!-- 特色专题 -->
+
+
+    <!-- 特色专题 -->
     <div id="special_topic"></div>
-<!-- 游戏专区 -->
-<div id="c_games"></div>
-<!-- 服务产品 -->
+    <!-- 游戏专区 -->
+    <div id="c_games"></div>
+    <!-- 服务产品 -->
     <div id="service_products"></div>
-<!-- 公共尾部 -->
-    <footer id="s_bottom" class="bton"></footer>    
-<!-- 悬浮窗 -->
+    <!-- 公共尾部 -->
+    <footer id="s_bottom" class="bton"></footer>
+    <!-- 悬浮窗 -->
     <div id="s_floatbox"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/header_footer.js"></script>
-    <script src="static/js/w-ej.js"></script>
     <script src="static/js/c-game.js"></script>
+    <script src="static/js/w-ej.js"></script>
     <script>
         $('#s_top').load('header-footer.html #s_top', function fn() {
             home.init()
         });
-        $('#w_swiper').load('w-ej.html #w_swiper', function fn() {
+        $('#w_swiper').load('w-ej.html #w_er_cswiper', function fn() {
             er.init()
         });
         $('#special_topic').load('w-center.html #special_topic')
-        $('#c_games').load('main.html #c_games',function(){
-           game.init()
+        $('#c_games').load('main.html #c_games', function () {
+            game.init()
         })
         $('#service_products').load('w-center.html #service_products')
-        $('#s_bottom').load('header-footer.html #s_bottom',)
+        $('#s_bottom').load('header-footer.html #s_bottom')
         $('#s_floatbox').load('header-footer.html #s_floatbox')
+    </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        })
     </script>
 </body>
 
