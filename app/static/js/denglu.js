@@ -45,17 +45,10 @@ $(function () {
                     $(".hefa").show().delay(1200).hide(0);
                 }
             })
-
-
-
-
         } else {
             $(".hefa").show().delay(600).hide(0);
         }
     })
-
-
-
 
     $(".input2").on("blur", function () {
         var ma = $(".yanzheng").html();

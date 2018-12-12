@@ -49,15 +49,15 @@ var shopList = (function () {
             })
         },
         gatDate() {
-            $.get('static/json/shop.json', (res) => {
-                console.log(res.data)
+            $.get('http://10.36.141.195:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
+                console.log(res)
                 if (res.msg === 200) {
                     this.data = res.data;
                     this.insertDate(res.data)
                 } else {
                     alert('信息错误');
                 }
-            }, 'json')
+            })
         },
         show(data) {
             $('.dailog_button').click(_ => {
