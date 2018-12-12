@@ -1,6 +1,6 @@
 var shopList = (function () {
     var $box = document.querySelector('.s_box');
-    var $box1=document.querySelector('.s_box1') 
+    var $box1 = document.querySelector('.s_box1')
     return {
         init() {
             console.log($box)
@@ -14,10 +14,10 @@ var shopList = (function () {
                 if (target.nodeName === 'A' && target.className == 'btn cart_add') {
                     let father = target.parentNode.parentNode;
                     let count = 1;
-
                     console.log(count)
                     _this.data[father.index].count = count;
-                    _this.addCar(_this.data[father.index])
+                    _this.show(_this.data[father.index])
+        
                 }
             }
             $('.collect').click(function () {
@@ -25,33 +25,45 @@ var shopList = (function () {
             })
             $('.action_more').click(function () {
                 $('.s_hidens').toggleClass("hide")
-                if($('.s_hidens').hasClass('hide')){
+                if ($('.s_hidens').hasClass('hide')) {
                     $('.action_more i').addClass('asus-down')
-                }else{
+                } else {
                     $('.action_more i').addClass('asus-xiangshang')
                 }
             })
-            $('.flip2').click(_=>{
+            $('.flip2').click(_ => {
                 $(this).toggleClass('active')
                 $('.s_box1').show()
                 $('.s_box').hide()
             })
-            $('.flip1').click(_=>{
+            $('.flip1').click(_ => {
                 $(this).toggleClass('active')
                 $('.s_box').show()
                 $('.s_box1').hide()
             })
+            $('.cart_add').click(function () {
+                $('#s_popbox').show()
+            })
+            $('.dailog_button_close').click(function () {
+                $('#s_popbox').hide()
+            })
         },
         gatDate() {
-            $.get('static/json/shop.json', (res) => {
-                console.log(res.data)
+            $.get('http://10.36.141.195:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
+                console.log(res)
                 if (res.msg === 200) {
                     this.data = res.data;
                     this.insertDate(res.data)
                 } else {
                     alert('信息错误');
                 }
-            }, 'json')
+            })
+        },
+        show(data) {
+            $('.dailog_button').click(_ => {
+                this.addCar(data)
+                $('#s_popbox').hide()
+            })
         },
         insertDate(data) {
             for (let i = 0; i < data.length; i++) {
@@ -61,7 +73,7 @@ var shopList = (function () {
                 $dl.innerHTML = `
                     <dt class="goods_pic"><img src="static/images/list${i + 1}.jpg" alt=""></dt>
                     <dd class="goods_info"> 
-                        <h3 class="goods_name"><a href="javascript: ;">${data[i].name}</a></h3>
+                        <h3 class="goods_name"><a href="w-fangdajing.html">${data[i].name}</a></h3>
                         <p class="price">￥${data[i].price}</p>
                     </dd>
                     <dd class="goods_buy">
@@ -71,9 +83,9 @@ var shopList = (function () {
                         <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
                     </dd>
               `
-                if (i <=15) {
+                if (i <= 15) {
                     $box.appendChild($dl)
-                }else if(i>15){
+                } else if (i > 15) {
                     $box1.appendChild($dl)
                 }
             }
@@ -85,7 +97,7 @@ var shopList = (function () {
             shopList = JSON.parse(shopList);
             for (var i = 0; i < shopList.length; i++) {
                 if (data.id == shopList[i].id) {
-                    shopList[i].count +=data.count;
+                    shopList[i].count += data.count;
                     break;
                 }
             }

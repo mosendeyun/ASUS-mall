@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_rqzc1fx6zco.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="static/css/common/reset.css">
     <link rel="stylesheet" href="static/css/common/header-footer.css">
     <link rel="stylesheet" href="static/css/shop_car.css">
@@ -24,7 +25,7 @@
                             <li class="cart_input">
                                 <div class="checkbox_box on">
                                     <i class="iconfont asus-gou"></i>
-                                    <input type="checkbox" id="allcheck" class="s_sec"  name="checkAlled">
+                                    <input type="checkbox" id="allcheck" class="s_sec" name="checkAlled">
                                 </div>
                                 <label class="checkbox_box_label">全选</label>
                             </li>
@@ -109,12 +110,29 @@
         </div>
     </div>
     <footer id="s_bottom" class="bton"></footer>
+    <div id="s_floatbox"></div>
+    <div id="s_popbox">
+        <div class="s_popup">
+            <p class="dailog_content">确定要删除？</p>
+            <i class="iconfont asus-cuo"></i>
+            <button class="dailog_button">确定</button>
+            <button class="dailog_button_close " style="display: block;">取消</button>
+        </div>
+    </div>
+
 </body>
 
 </html>
 <script src="static/js/jquery.js"></script>
+<script src="static/js/header_footer.js"></script>
 <script src="static/js/shop_car.js"></script>
 <script>
-    $('#s_top').load('header-footer.html #s_top');
-    $('#s_bottom').load('header-footer.html #s_bottom');
+    $('#s_top').load('header-footer.html #s_top', function fn() {
+        home.init()
+    });
+
+    $('#s_bottom').load('header-footer.html #s_bottom')
+    $('#s_floatbox').load('header-footer.html #s_floatbox')
+
+
 </script>

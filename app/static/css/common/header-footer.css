@@ -52,6 +52,7 @@
   width: 100px;
   text-align: center;
   position: relative;
+  display: none;
 }
 #s_top .s_topbar .s_page .s_right ul .s_member i {
   font-size: 18px;
@@ -455,4 +456,28 @@
 #s_bottom .s_info .s_theme .s_gn img {
   vertical-align: middle;
   display: inline-block;
+}
+#s_floatbox {
+  position: fixed;
+  top: 50%;
+  margin-top: -100px;
+  right: 0;
+  z-index: 100001;
+}
+#s_floatbox .w-fx1 .w-fx2 {
+  background-color: #00a8ff;
+  position: relative;
+}
+#s_floatbox .w-fx1 .w-fx2 .w-fx3 {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  display: none;
+}
+#s_floatbox .w-fx1 .w-fx2 .w-fx3 img {
+  width: 170px;
+  height: 424px;
+}
+#s_floatbox .w-fx1 .w-fx2:hover .w-fx3 {
+  display: block;
 }

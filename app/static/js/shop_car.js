@@ -4,17 +4,16 @@ var shopCar = (function () {
     return {
         init() {
             this.getData();
-            // this.allcheckbox()
+            this.delsql(false)
+            this.close();
         },
         event() {
             var _this = this;
-            $('.cart_action').click(function () {
-                let pNode = $(this).parent().parent().parent()
-                console.log(_this.data);
-                _this.data.splice(pNode.index, 1);
-                pNode.remove();
-                localStorage.shopList = JSON.stringify(_this.data)
-            })
+           
+            // $('.btn_delete').click(function(event){
+            //     event.stopPropagation()
+            //     $('#s_popbox').show()
+            // })
             $(".count").blur(function () {
                 let index = $(this).parent().parent().parent().parent().parent().index()
                 let data = _this.data[index];
@@ -27,6 +26,7 @@ var shopCar = (function () {
                 var val = $(this).next().val() * 1
                 --val
                 if (val < 1) {
+                    val=1
                     $(this).next().val(1)
                 } else {
                     $(this).next().val(val)
@@ -40,7 +40,8 @@ var shopCar = (function () {
                 var val = $(this).prev().val() * 1
                 ++val
                 if (val < 1) {
-                    $(this).prev().val(1)
+                    val=1
+                    $(this).prev().val(val)
                 } else {
                     $(this).prev().val(val)
                 }
@@ -76,6 +77,9 @@ var shopCar = (function () {
                 } else {
                     $("#allcheck").prev().removeClass('iconfont checkAll asus-gou')
                 }
+            })
+            $('.btn_delete').click(_=>{
+               
             })          
 
         },
@@ -83,7 +87,6 @@ var shopCar = (function () {
             var shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
             this.data = shopList;
-            console.log(this.data)
             this.insertData(shopList)
 
         },
@@ -148,11 +151,33 @@ var shopCar = (function () {
                 total += data[index].price * data[index].count;
                 
             })
-            console.log(sum)
             $('.allNum').html(data.length)
             $('.chooseNum').html(sum)
             $('.total_price b').html(total)
             this.event()
+        },
+        show(pNode){
+            $('.dailog_button').click(_=>{
+                     this.data.splice(pNode.index, 1);
+                    pNode.remove();
+                    localStorage.shopList = JSON.stringify(this.data)
+                $('#s_popbox').hide()
+            })
+        },
+        close(){
+            $('.dailog_button_close').click(function(){
+                $('#s_popbox').hide()
+            })
+        },
+        delsql(bool){
+            var _this=this;
+            console.log(bool)
+            $('.cart_action').click(function (event) {
+                event.stopPropagation()
+                $('#s_popbox').show()
+                var pNode = $(this).parent().parent().parent()
+                _this.show(pNode)
+            })
         }
     }
 

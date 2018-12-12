@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品页</title>
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_rqzc1fx6zco.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
     <link rel="stylesheet" href="static/css/common/reset.css">
     <link rel="stylesheet" href="static/css/common/header-footer.css">
     <link rel="stylesheet" href="static/css/shop_list.css">
@@ -17,7 +19,7 @@
     <div id="s_main">
         <div class="s_maincon">
             <div class="main_bread">
-                <a href="homepage.html/" alt="" title="">首页</a>
+                <a href="index.html">首页</a>
                 <span>></span>
                 <span>
                     <a href="/store/gallery-1.html">笔记本电脑 ></a>
@@ -179,7 +181,7 @@
                     <div class="gallery_show">
                         <div class="gallery_grid">
                             <div class="s_box s_hide">
-                            <!-- 商品渲染区 -->
+                                <!-- 商品渲染区 -->
                                 <!-- <dl class="clearfix goods_item ga-product">
                                     <dt class="goods_pic"><img src="static/images/list1.jpg" alt=""></dt>
                                     <dd class="goods_info">
@@ -225,14 +227,28 @@
                 </div>
             </div>
         </div>
-        <footer id="s_bottom"></footer>
+    </div>
+    <footer id="s_bottom"></footer>
+    <div id="s_popbox">
+        <div class="s_popup">
+            <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
+            <i class="cuo iconfont asus-cuo"></i>
+            <p class="minicon_caution_info">目前选购商品共<em>2</em>种<em>20</em>件。合计 <i class="price">￥138980</i></p>
+            <button class="dailog_button">确定</button>
+            <button class="dailog_button_close " style="display: block;">取消</button>
+        </div>
+    </div>
 
 </body>
 
 </html>
 <script src="static/js/jquery.js"></script>
+<script src="static/js/header_footer.js"></script>
 <script src="static/js/shop_list.js"></script>
 <script>
-    $('#s_top').load('header-footer.html #s_top');
-    $('#s_bottom').load('header-footer.html #s_bottom');
+    $('#s_top').load('header-footer.html #s_top', function fn() {
+        home.init()
+    });
+    $('#s_bottom').load('header-footer.html #s_bottom')
+    $('#s_floatbox').load('header-footer.html #s_floatbox')
 </script>

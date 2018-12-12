@@ -1,100 +1,124 @@
-*{
+* {
     box-sizing: border-box;
 }
-.fr{
+
+.fr {
     float: right;
 }
-.fl{
+
+.fl {
     float: left;
 }
-.w{
-	width: 1042px;
-    height: 500px;
+
+.w {
+    /* 更改 */
+    /* width: 1042px;
+    height: 500px; */
     position: absolute;
-    top:100px;
+    top: 100px;
     left: 100px;
     z-index: 10;
 }
-.w-er{
-    width: 1042px;
+
+.w-er {
+    display: flex;
+    /* width: 1042px; */
     height: 500px;
     /* background:yellow; */
     /* border: 1px solid black; */
 }
-.w-er1{
-    width: 234px;
-    height: 500px; 
+
+.w-er1 {
+    width: 242px;
+    height: 500px;
     display: flex;
     /* border: 1px solid black; */
     flex-direction: column;
     justify-content: space-around;
 }
-.w-er1 li{
+
+.w-er1 li {
     font-size: 14px;
-    padding:0 10px;
+    padding: 0 10px;
     flex: 1;
     height: 40px;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     /* border: 1px solid black; */
     color: white;
 }
-.w-er1 li:hover{
-    background: aqua;
+
+.w-er1 li:hover {
+    background: #00a8ff;
 }
-.w-er1 li>div{
+
+.w-er1 li>div {
     line-height: 56px;
-    float:right;
+    float: right;
 }
-.w-er1 li>div>span{
+
+.w-er1 li>div>span {
     display: inline-block;
 }
-.item{
+
+.item {
     height: 56px;
     line-height: 56px;
 }
+
 /* _______________________________________ */
-.w-er2{
-    width: 808px;
-    height: 500px;
+
+.w-er2 {
+    /* 更改 */
+    /* display: flex; */
+    width: 800px;
+    /* height: 500px; */
     /* background: #fff; */
+    /* border: 1px solid red; */
     position: relative;
+    display: none;
 }
-.uu{
+
+.uu {
     position: absolute;
-    width: 808px;
+    /* display: flex; */
+    /* width: 801px; */
     height: 500px;
     left: 0;
     top: 0;
-    /*border:1px solid red;*/
-    /* background: aqua; */
-    display: none;
-}
-/* --------------------------- */
-.w-er2 li{
-	height: 61px;
-	width: 100%;
-	line-height: 61px;
-	padding-left: 20px;
-	border-bottom: 1px solid #ccc;
+    /* border: 1px solid red; */
+    background: white;
+    /* display: none; */
 }
 
-.w-er2-1-1{
+/* --------------------------- */
+
+.w-er2 li {
+    height: 61px;
+    width: 100%;
+    line-height: 61px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.w-er2-1-1 {
     height: 500px;
     width: 300px;
     /* background: red; */
-
 }
-.w-er2-1-2{
+
+.w-er2-1-2 {
     width: 100%;
     height: 100%;
 }
-.w-er2-1-2 li{
+
+.w-er2-1-2 li {
     width: 100%;
     height: 50px;
     /*border-bottom: 1px solid black;*/
-    padding-left:10px;
+    padding-left: 10px;
 }
-.w-er2-1-2 li span{
+
+.w-er2-1-2 li span {
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -109,46 +133,61 @@
 }
 
 /*________*/
-.w-er2-2{
-	display: block;
-}
-.w-er-2-2-1{
-	height: 500px;
-    width: 400px;
-    /*border: 1px solid aqua;*/
-}
-.w-er-2-2-2{
-	width: 100%;
-	height: 100%;
-}
-.w-er-2-2-2 .w-er-2-2-3{
-	margin-right: 30px;
-}
-.w-er-2-2-2 a{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 10px;
-	font-size: 14px;
+
+.w-er2-2 {
+    display: block;
 }
 
-.swpier{
+.w-er-2-2-1 {
+    height: 500px;
+    width: 451px;
+    /*border: 1px solid aqua;*/
+}
+
+.w-er-2-2-2 {
+    width: 100%;
+    height: 100%;
+}
+
+.w-er-2-2-2 .w-er-2-2-3 {
+    margin-right: 30px;
+}
+
+.w-er-2-2-2 a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.swpier {
     /* display: none; */
+<<<<<<< HEAD
         width: 100%;
         height: 500px;
         background: yellow;
         position: absolute;
         top:100px;
         cursor: pointer;
-}
-.swpier .swiper-container{
+=======
     width: 100%;
-        height: 500px;
-      
+    height: 500px;
+    background: yellow;
+    position: absolute;
+    top: 100px;
+>>>>>>> b5ee8af2f71b5e7cd479bba24f8748a31b502e0b
 }
-.swiper-wrapper{
+
+.swpier .swiper-container {
     width: 100%;
-        height: 500px;
+    height: 500px;
 }
+
+.swiper-wrapper {
+    width: 100%;
+    height: 500px;
+}
+
 .swiper-wrapper img {
     width: 100%;
     height: 500px;

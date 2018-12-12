@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_954158_575r8m45yyc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="static/css/common/reset.css">
     <link rel="stylesheet" href="static/css/common/header-footer.css">
     <link rel="stylesheet" href="static/css/w-fdj.css">
@@ -140,7 +141,7 @@
                     <div class="header6-2-1">
                         <!--  -->
                         <div class=" header6-2-2 fl">
-                            <span class="iconfont icon-jian fl"></span>
+                            <span class="iconfont icon-jian"></span>
                         </div>
                         <!--  -->
                         <div class="header6-2-3 fl">0</div>
@@ -174,13 +175,11 @@
                     <div class="header8-1">
                         <ul class="header8-1-2">
                             <li>立即购买</li>
-                            <li>加入购物车</li>
+                            <li><a href="shop_list.html">加入购物车</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="center banxin">
             <ul class="center1">
                 <li>商品详情</li>
                 <li>详细参数</li>
@@ -188,7 +187,9 @@
                 <li>售后服务</li>
                 <li>推换货说明</li>
             </ul>
-            <div class="center2 clear">
+        </div>
+        <div class="center ">
+            <div class="center2 banxin clear">
                 <div class="center2-1">
                     <img src="static/images/w6.jpg" alt="">
                     <img src="static/images/w7.jpg" alt="">
@@ -219,10 +220,14 @@
 </html>
 <script src="static/js/public.js"></script>
 <script src="static/js/jquery.js"></script>
+<script src="static/js/header_footer.js"></script>
 <script src="static/js/w-fdj.js"></script>
 <script>
-     $('#s_top').load('header-footer.html #s_top');
+     $('#s_top').load('header-footer.html #s_top', function fn() {
+        home.init()
+    });
     $('#s_bottom').load('header-footer.html #s_bottom');
+    $('#s_floatbox').load('header-footer.html #s_floatbox')
     fdj.init();
     shuliang.init();
     link.init();
