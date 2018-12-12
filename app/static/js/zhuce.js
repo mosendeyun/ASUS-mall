@@ -68,14 +68,15 @@ $(function () {
                                 $('#check').prop('checked', true);
                                 $(".c-login2").click(function () {
                                     var number = $(".c-phone2").val();
-                                    $.get("http://10.36.141.149:1810/ASUS-mall/server/php/zhuce.php",
+                                    $.get("http://10.36.141.210:1810/ASUS-mall/server/php/zhuce.php",
                                         {
                                             val: number
                                         },
                                         function (data) {
                                            
                                             setTimeout(() => {  
-                                                location.href = "http://10.36.141.149:1810/ASUS-mall/app/denglu.html"
+                                                console.log("跳转过去没")
+                                                location.href = "Login.html"
                                             }, 1000)
                                         }
                                     )

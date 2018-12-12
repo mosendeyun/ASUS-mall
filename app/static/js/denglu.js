@@ -75,7 +75,7 @@ $(function () {
 
 
                         $.post(
-                            "http://10.36.141.149:1810/ASUS-mall/server/php/denglu.php",
+                            "http://10.36.141.210:1810/ASUS-mall/server/php/denglu.php",
                             { "phone_number": phone },
                             function (res) {
                              

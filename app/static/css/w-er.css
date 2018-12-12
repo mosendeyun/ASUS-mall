@@ -163,12 +163,15 @@
 
 .swpier {
     /* display: none; */
-    width: 100%;
-    height: 500px;
-    background: yellow;
-    position: absolute;
-    top:0;
+
+        width: 100%;
+        height: 500px;
+        background: yellow;
+        position: absolute;
+        cursor: pointer;
+        top:0;
 }
+
 
 .swpier .swiper-container {
     width: 100%;
@@ -183,9 +186,6 @@
 .swiper-wrapper img {
     width: 100%;
     height: 500px;
-}
-.active {
-    background: red; opacity: 1;
 }
 
 

@@ -22,8 +22,6 @@
 
     <!-- 轮播导航 -->
     <div id="w_swiper"></div>
-
-
     <!-- 特色专题 -->
     <div id="special_topic"></div>
     <!-- 游戏专区 -->
@@ -53,34 +51,6 @@
         $('#service_products').load('w-center.html #service_products')
         $('#s_bottom').load('header-footer.html #s_bottom')
         $('#s_floatbox').load('header-footer.html #s_floatbox')
-    </script>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
-
-            // 如果需要分页器
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // 如果需要滚动条
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            autoplay: {
-                delay: 2000,
-                stopOnLastSlide: false,
-                disableOnInteraction: true,
-            },
-        })
     </script>
 </body>
 
