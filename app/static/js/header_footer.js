@@ -9,10 +9,11 @@ var home = (function () {
             }
         },
         insert() {
-            $('.s_count').html(localStorage.shopList.split().length + 1)
+            $('.s_count').html(localStorage.cumse)
             $('.s_cart').mouseenter(function () {
                 $('.minicart_cont').css({ display: 'block' })
-                $('.s_nums').html(`您一共选择了${localStorage.shopList.split().length + 1}件产品`)
+                $('.s_nums').html(`您一共选择了${localStorage.cumse}件产品`)
+            
             }).mouseleave(function () {
                 $('.minicart_cont').css({ display: 'none' })
             })
@@ -88,9 +89,16 @@ var home = (function () {
                         }
                     });
                 } else {
-                    $('.searchbar_198 ul').html('')    //如果输入框的词都删除了，把获取的数据结果也清空，因为已经获取到数据了，即使阻止再次发送请求也不会把已经获得的数据清除，所以这里直接用了最简单的办法，直接清空数据
+                    $('.searchbar_198 ul').html('') 
                     $('.searchbar_198 ul').hide()
                 }
+            })
+            $('.btn-search').mousedown(_=>{
+                console.log(11)
+                location.href='shop_list.html'
+            })
+            $('#keyword').mouseleave(_=>{
+                $('.searchbar_198 ul').hide()
             })
         }
     }

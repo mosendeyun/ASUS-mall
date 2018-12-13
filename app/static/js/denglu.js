@@ -74,8 +74,8 @@ $(function () {
 
 
 
-                        $.post(
-                            "http://10.36.141.228:1810/ASUS-mall/server/php/denglu.php",
+                        $.post(apiObj.login,
+                            
                             { "phone_number": phone },
                             function (res) {
                              

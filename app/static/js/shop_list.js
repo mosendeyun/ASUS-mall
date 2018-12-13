@@ -3,10 +3,11 @@ var shopList = (function () {
     var $box1 = document.querySelector('.s_box1')
     return {
         init() {
-          this.a=0
-          this.sum=0;
-          this.cot=0;
+            this.a = 0
+            this.sum = 0;
+            this.cot = 0;
             this.gatDate();
+            console.log(apiObj.shopLis)
         },
         event() {
             var _this = this;
@@ -18,7 +19,7 @@ var shopList = (function () {
                     let count = 1;
                     // console.log(_this.data[father.index])
                     _this.data[father.index].count = count;
-                    _this.addCar(_this.data[father.index])       
+                    _this.addCar(_this.data[father.index])
                 }
             }
             $('.collect').click(function () {
@@ -44,7 +45,7 @@ var shopList = (function () {
             })
             $('.cart_add').click(function () {
                 $('#s_popbox').show()
-                let father =$(this).parent().parent().parent()
+                let father = $(this).parent().parent().parent()
                 console.log(_this.a)
                 $('.s_popup').html(`
                     <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
@@ -59,13 +60,13 @@ var shopList = (function () {
                 $('.dailog_button').click(_ => {
                     $('#s_popbox').hide()
                 })
-                $('.cuo').click(_=>{
+                $('.cuo').click(_ => {
                     $('#s_popbox').hide()
                 })
             })
         },
         gatDate() {
-            $.get('http://10.36.141.233.:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
+            $.get(apiObj.shopLis, (res) => {
                 // $.get('static/json/shop.json', (res) => {
                 // console.log(res)
                 if (res.msg === 200) {
@@ -99,8 +100,8 @@ var shopList = (function () {
                 } else if (i > 15) {
                     $box1.appendChild($dl)
                 }
-               
-               
+
+
             }
             this.event()
         },
@@ -117,12 +118,11 @@ var shopList = (function () {
             if (i == shopList.length) {
                 shopList.push(data);
             }
-            this.sum+=shopList[i].price
-            this.cot+=shopList[i].count
-            this.a=shopList.length
+            this.sum += shopList[i].price
+            this.cot += shopList[i].count
+            this.a = shopList.length
             console.log(shopList)
             localStorage.shopList = JSON.stringify(shopList);
-            localStorage.carnum=shopList.length;
         }
     }
 }())

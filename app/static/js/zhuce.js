@@ -1,9 +1,9 @@
 $(function () {
-
     //手机号码格式  认证
+    var url=apiObj.register
     $(".c-phone2").blur(function () {
         var str = $(this).val();
-        console.log(str);
+        
         var res = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
         if (res.test(str) && str !== "") {
 
@@ -26,7 +26,7 @@ $(function () {
                 })
                 
                 
-                
+               
                 
                 //隐藏的验证码  验证
                 $(".c-yan2").blur(function () {
@@ -62,21 +62,23 @@ $(function () {
                             // console.log($(".btn-number"));
                             // console.log(yan);
                             if ($(".btn-number").text() === yan ) {
-                
+                                
+                               
                 
                             // 最后一个条件满足 才  可以去发 阿贾克斯  请求
                                 $('#check').prop('checked', true);
                                 $(".c-login2").click(function () {
                                     var number = $(".c-phone2").val();
-                                    $.get("http://10.36.141.210:1810/ASUS-mall/server/php/zhuce.php",
+                                    $.get(url,
                                         {
                                             val: number
                                         },
                                         function (data) {
-                                           
+                                            console.log(apiObj.register)
+                                           console.log(11)
                                             setTimeout(() => {  
                                                 console.log("跳转过去没")
-                                                location.href = "http://localhost:1810/ASUS-mall/app/denglu.html"
+                                                location.href = "denglu.html"
                                             }, 1000)
                                         }
                                     )

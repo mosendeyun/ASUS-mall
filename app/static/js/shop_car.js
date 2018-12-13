@@ -4,8 +4,6 @@ var shopCar = (function () {
     return {
         init() {
             this.getData();
-            // this.delsql(false)
-            // this.close();
         },
         event() {
             var _this = this;
@@ -200,30 +198,8 @@ var shopCar = (function () {
             $('.chooseNum').html(sum)
             $('.total_price b').html(total)
             this.event()
-        },
-        show(pNode) {
-            $('.dailog_button').click(_ => {
-                this.data.splice(pNode.index, 1);
-                pNode.remove();
-                localStorage.shopList = JSON.stringify(this.data)
-                $('#s_popbox').hide()
-            })
-        },
-        close() {
-            $('.dailog_button_close').click(function () {
-                $('#s_popbox').hide()
-            })
-        },
-        // delsql(bool) {
-        //     var _this = this;
-        //     console.log(bool)
-        //     $('.cart_action').click(function (event) {
-        //         event.stopPropagation()
-        //         $('#s_popbox').show()
-        //         var pNode = $(this).parent().parent().parent()
-        //         _this.show(pNode)
-        //     })
-        // }
+            localStorage.cumse=data.length
+        }
     }
 
 }())
