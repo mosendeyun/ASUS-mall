@@ -7,7 +7,6 @@ var shopList = (function () {
             this.sum = 0;
             this.cot = 0;
             this.gatDate();
-            console.log(apiObj.shopLis)
         },
         event() {
             var _this = this;
@@ -20,6 +19,23 @@ var shopList = (function () {
                     // console.log(_this.data[father.index])
                     _this.data[father.index].count = count;
                     _this.addCar(_this.data[father.index])
+                    $('#s_popbox').show()
+                    $('.s_popup').html(`
+                    <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
+                    <i class="cuo iconfont asus-cuo"></i>
+                    <p class="minicon_caution_info">目前选购商品共<em>${_this.a}</em>种<em>${_this.cot}</em>件。合计 <i class="price">${_this.sum}</i></p>
+                    <button class="dailog_button">继续购物</button>
+                    <button class="dailog_button_close " style="display: block;"><a href="shop_car.html"> 进入购物车</a></button>
+                `)
+                    $('.dailog_button_close').click(function () {
+                        $('#s_popbox').hide()
+                    })
+                    $('.dailog_button').click(_ => {
+                        $('#s_popbox').hide()
+                    })
+                    $('.cuo').click(_ => {
+                        $('#s_popbox').hide()
+                    })
                 }
             }
             $('.collect').click(function () {
@@ -42,28 +58,6 @@ var shopList = (function () {
                 $(this).toggleClass('active')
                 $('.s_box').show()
                 $('.s_box1').hide()
-            })
-            $('.cart_add').click(function () {
-                $('#s_popbox').show()
-                let father = $(this).parent().parent().parent()
-                // _this.addCar(_this.data[father.index])
-                // console.log(_this.a)
-                $('.s_popup').html(`
-                    <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
-                    <i class="cuo iconfont asus-cuo"></i>
-                    <p class="minicon_caution_info">目前选购商品共<em>${_this.a}</em>种<em>${_this.cot}</em>件。合计 <i class="price">${_this.sum}</i></p>
-                    <button class="dailog_button">继续购物</button>
-                    <button class="dailog_button_close " style="display: block;"><a href="shop_car.html"> 进入购物车</a></button>
-                `)
-                $('.dailog_button_close').click(function () {
-                    $('#s_popbox').hide()
-                })
-                $('.dailog_button').click(_ => {
-                    $('#s_popbox').hide()
-                })
-                $('.cuo').click(_ => {
-                    $('#s_popbox').hide()
-                })
             })
         },
         gatDate() {
@@ -90,10 +84,10 @@ var shopList = (function () {
                         <p class="price">￥${data[i].price}</p>
                     </dd>
                     <dd class="goods_buy">
-                        <a class="btn cart_add" href="javascripta:;"><i class="iconfont icon-gouwucheman"></i>加入购物车</a> 
+                        <a class="btn cart_add" href="javascripta:;"><i class="iconfont asus-gouwucheman"></i>加入购物车</a> 
                     </dd>
                     <dd class="goods_others">
-                        <a href="javascript: ;" class="collect"><i class="iconfont icon-xin">收藏</i></a>
+                        <a href="javascript: ;" class="collect"><i class="iconfont asus-xin">收藏</i></a>
                     </dd>
               `
                 if (i <= 15) {
