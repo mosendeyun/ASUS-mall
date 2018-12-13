@@ -46,7 +46,8 @@ var shopList = (function () {
             $('.cart_add').click(function () {
                 $('#s_popbox').show()
                 let father = $(this).parent().parent().parent()
-                console.log(_this.a)
+                // _this.addCar(_this.data[father.index])
+                // console.log(_this.a)
                 $('.s_popup').html(`
                     <p class="dailog_content"><i class="fonst iconfont asus-cuo"></i>加入购物车成功</p>
                     <i class="cuo iconfont asus-cuo"></i>
