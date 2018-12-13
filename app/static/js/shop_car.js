@@ -1,6 +1,5 @@
 var shopCar = (function () {
     var cartList = document.querySelector('.cart_list');
-    console.log(cartList)
     return {
         init() {
             this.getData();
@@ -131,7 +130,7 @@ var shopCar = (function () {
 
         },
         getData() {
-            shopList = localStorage.shopList || '[]';
+            var shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
             this.data = shopList;
             console.log(shopList)
