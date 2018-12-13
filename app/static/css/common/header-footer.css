@@ -54,9 +54,13 @@
   position: relative;
   display: none;
 }
+#s_top .s_topbar .s_page .s_right ul .s_member a {
+  font-size: 12px;
+}
 #s_top .s_topbar .s_page .s_right ul .s_member i {
   font-size: 18px;
   vertical-align: middle;
+  margin-left: 5px;
 }
 #s_top .s_topbar .s_page .s_right ul .s_member .s_men_fast {
   width: 100%;

@@ -75,7 +75,7 @@ $(function () {
 
 
                         $.post(
-                            "http://10.36.141.210:1810/ASUS-mall/server/php/denglu.php",
+                            "http://10.36.141.228:1810/ASUS-mall/server/php/denglu.php",
                             { "phone_number": phone },
                             function (res) {
                              
@@ -86,6 +86,7 @@ $(function () {
                                     $("#tiaozhuan").html("页面即将跳转");
                                         $("#tiaozhuan").show().delay(1500).hide(0);
                                         document.cookie=`username=${phone}`
+                                        location.href='index.html'
                                 }
                                 else{
                                     $("#tiaozhuan").html("先注册再登录");

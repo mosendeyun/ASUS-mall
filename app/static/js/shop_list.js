@@ -65,8 +65,8 @@ var shopList = (function () {
             })
         },
         gatDate() {
-            // $.get('http://10.36.141.195:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
-                $.get('static/json/shop.json', (res) => {
+            $.get('http://10.36.141.233.:8888/gitup/ASUS-mall/server/php/json.php', (res) => {
+                // $.get('static/json/shop.json', (res) => {
                 // console.log(res)
                 if (res.msg === 200) {
                     this.data = res.data;

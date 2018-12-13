@@ -3,6 +3,10 @@ var home = (function () {
         init() {
             this.insert()
             this.searchInp()
+            if(document.cookie){
+                $('.s_member').show()
+                $('.user').html(`${document.cookie.split('=')[1].replace(/\"/g,"")}<i class="iconfont asus-down"></i></a>`)
+            }
         },
         insert() {
             $('.s_count').html(localStorage.shopList.split().length + 1)
