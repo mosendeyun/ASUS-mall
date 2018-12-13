@@ -36,7 +36,12 @@ var shopCar = (function () {
                 let index = $(this).parent().parent().parent().parent().parent().index()
                 let data = _this.data[index];
                 console.log(data.count)
-                data.count = $(this).val()
+                if($(this).val()<1){
+                    $(this).val(1)
+                }else if($(this).val()>11){
+                    $(this).val(11)
+                }
+                data.count = Math.abs(Math.ceil($(this).val())) 
                 localStorage.shopList = JSON.stringify(_this.data)
                 _this.insertData(_this.data)
             })
@@ -67,7 +72,7 @@ var shopCar = (function () {
                 _this.insertData(_this.data)
             })
             $('.btn_increase').click(function () {
-                var val = $(this).prev().val() * 1
+                var val = Math.ceil($(this).prev().val()) 
                 ++val
                 if (val > 11) {
                     val = 11
@@ -126,7 +131,7 @@ var shopCar = (function () {
 
         },
         getData() {
-            var shopList = localStorage.shopList || '[]';
+            shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
             this.data = shopList;
             console.log(shopList)
@@ -192,13 +197,15 @@ var shopCar = (function () {
                 cartList.appendChild($div)
                 sum += data[index].count;
                 total += data[index].price * data[index].count;
-
+                
             })
             $('.allNum').html(data.length)
             $('.chooseNum').html(sum)
             $('.total_price b').html(total)
             this.event()
             localStorage.cumse=data.length
+            localStorage.shopList = JSON.stringify(data);
+            
         }
     }
 
