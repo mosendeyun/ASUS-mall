@@ -16,59 +16,55 @@ var rename = require('gulp-rename');
 
 //压缩js
 gulp.task('minijs', function () {
-    gulp.src('app/static/**/*.js')
+   return gulp.src('app/static/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(uglify())
-        .pipe(rename({
-            // 添加后缀
-            suffix: '.min'
-        }))
+        // .pipe(rename({
+        //     // 添加后缀
+        //     suffix: '.min'
+        // }))
         .pipe(gulp.dest('dist/static/'))
         .pipe(connect.reload())
 })
 //压缩css
 gulp.task('minicss', function () {
-    gulp.src('app/static/**/*.css')
+    return gulp.src('app/static/**/*.css')
         .pipe(minicss())
-        .pipe(rename({
-            // 添加后缀
-            suffix: '.min'
-        }))
+        // .pipe(rename({
+        //     // 添加后缀
+        //     suffix: '.min'
+        // }))
         .pipe(gulp.dest('dist/static/'))
         .pipe(connect.reload())
 })
 
 gulp.task('less', function () {
-    gulp.src('app/static/**/*.css')
+    return gulp.src('app/static/**/*.css')
         .pipe(less())
         .pipe(gulp.dest('dist/static'));
 });
 
 //压缩HTML
 gulp.task('minihtml', function () {
-    gulp.src('app/*.html')
+    return gulp.src('app/*.html')
         .pipe(minihtml())
         .on('error', function (err) {
             console.log(err.message);
             this.emit('end')
         })
-        .pipe(rename({
-            // 添加后缀
-            suffix: '.min'
-        }))
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload())//实时刷新
 })
 //图片压缩
 gulp.task('miniimg', function () {
-    gulp.src('app/static/images/*')
+    return gulp.src('app/static/images/*')
         .pipe(miniimg())
-        .pipe(rename({
-            // 添加后缀
-            suffix: '.min'
-        }))
+        // .pipe(rename({
+        //     // 添加后缀
+        //     suffix: '.min'
+        // }))
         .pipe(gulp.dest('dist/static/images'))
         .pipe(connect.reload())
 })
@@ -94,7 +90,7 @@ gulp.task('connect', function () {
 
 //删除文件
 gulp.task('clean', () => {
-    del(['dist', 'rev']).then(_ => {
+    return del(['dist', 'rev']).then(_ => {
         console.log('删除完毕')
     })
 })
@@ -109,9 +105,7 @@ gulp.task('default', function () {
         'connect',
     )
 })
-gulp.task('dev', function () {
-    run(['clean'], ['minijs', 'miniimg', 'minicss', 'minihtml'], ['watch', 'connect'])
-})
+
 
 
 
